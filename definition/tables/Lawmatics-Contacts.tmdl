@@ -1,0 +1,107 @@
+table Lawmatics-Contacts
+	lineageTag: 89d2e886-7700-499f-95ba-db7bee9fd44a
+
+	column id
+		dataType: string
+		lineageTag: d150f3d8-115a-4550-8d6c-d0b69e6009e9
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: 26cb49f4-b2d8-48fd-b4c6-f9a746219d3c
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: d4253496-4775-46c9-b90c-e3b8500d3015
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: 43bb7652-92a8-4ada-b5cd-a687ac62bf09
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: d7bb8c49-8cd8-4bc4-858e-ca75a132ea0d
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column phone
+		dataType: string
+		lineageTag: 98fa46bb-6f53-4884-aea0-c052bf4cd1ba
+		summarizeBy: none
+		sourceColumn: phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 45ca8be4-5b76-4fed-8d44-502819be4a40
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: 39a7a7de-6e9a-421d-8635-8041fbe71eb6
+			defaultHierarchy: LocalDateTable_76b4e46e-5550-4f57-9aff-03d901aca40a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 43b7b20c-6c5f-4dfa-94aa-88644681518f
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		variation Variation
+			isDefault
+			relationship: 6ba8253d-8ee6-4a2a-b91e-f22aacf85a94
+			defaultHierarchy: LocalDateTable_eb96b06e-2fc8-48bf-b9dc-a259e9a2ede5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column _skyvia_sync
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 921ecc6b-2100-432a-8088-c6b28f205ed9
+		summarizeBy: none
+		sourceColumn: _skyvia_sync
+
+		variation Variation
+			isDefault
+			relationship: 8bfe49c0-259a-46bd-9a88-14f8f9b4b88b
+			defaultHierarchy: LocalDateTable_4dabad38-9c97-4066-8f2a-c43bf51166d8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Lawmatics-Contacts = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    lawmatics_Schema = #"caramel-compass-452313-u3_Database"{[Name="lawmatics",Kind="Schema"]}[Data],
+				    Contacts_Table = lawmatics_Schema{[Name="Contacts",Kind="Table"]}[Data]
+				in
+				    Contacts_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

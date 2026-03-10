@@ -1,0 +1,1009 @@
+table Lawmatics-Prospects-Expanded
+	lineageTag: c4d2e19d-377a-4f61-b857-8028b9c66f58
+
+	measure 'Total Leads' = COUNTROWS('Lawmatics-Prospects-Expanded')
+		formatString: 0
+		lineageTag: 5315504d-d05b-4e3c-b333-a3c8743e0764
+
+	measure 'Qualified Leads' = CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), 'Lawmatics-Prospects-Expanded'[CF_Qualified_Lead] = "Yes")
+		formatString: 0
+		lineageTag: 3744ca63-90a0-42fd-9ba9-a679bf3df7b9
+
+	measure 'Unqualified Leads' = CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), 'Lawmatics-Prospects-Expanded'[CF_Qualified_Lead] = "No")
+		formatString: 0
+		lineageTag: 3f7674aa-621e-434e-b0b1-60d61a627769
+
+	measure 'Qualification Rate' = DIVIDE([Qualified Leads], [Qualified Leads] + [Unqualified Leads], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2dd78b64-db8c-4114-a1d1-bf3f59347309
+
+	measure 'Total Value' = SUM('Lawmatics-Prospects-Expanded'[Value])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: b477ed40-5747-448d-8db8-a38a8f0c89f0
+
+	measure 'Median Value' = MEDIAN('Lawmatics-Prospects-Expanded'[Value])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: dc7dcc3c-27c7-438b-b7e3-7036447027d6
+
+	measure 'Avg Value' = AVERAGE('Lawmatics-Prospects-Expanded'[Value])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: a762791a-3a40-4840-b6d6-78da9b4cc200
+
+	measure 'Leads with Charge' = CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), NOT(ISBLANK('Lawmatics-Prospects-Expanded'[CF_Charge])))
+		formatString: 0
+		lineageTag: c9ae0b72-a37d-4835-8d92-ae853a1590a7
+
+	measure 'Consults Scheduled' = CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), CONTAINSSTRING('Lawmatics-Prospects-Expanded'[CF_Next_Steps], "Schedule"))
+		formatString: 0
+		lineageTag: a478c2b8-e79b-4bd6-96c6-acd8929a02f5
+
+	measure 'Fee Agreements Sent' = CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), CONTAINSSTRING('Lawmatics-Prospects-Expanded'[CF_Consultation_Outcome], "Fee Agreement"))
+		formatString: 0
+		lineageTag: 5d1f1c44-6098-4591-8499-3f375d5e6f63
+
+	/// PLACEHOLDER: Requires stage_id column on Prospects. Formula will be: CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), RELATEDTABLE filter on Stage Mapping MainStatus = Hired)
+	measure Hired = BLANK()
+		formatString: 0
+		lineageTag: 73e5caca-3f87-4773-a191-e80ba71e8d69
+
+	/// PLACEHOLDER: Requires stage_id column on Prospects.
+	measure 'Did Not Hire' = BLANK()
+		formatString: 0
+		lineageTag: 0e4639b3-dcfd-410f-91c2-dcd6b9b6586a
+
+	/// PLACEHOLDER: Requires stage_id column on Prospects.
+	measure Intake = BLANK()
+		formatString: 0
+		lineageTag: c68be81e-cacd-4379-82da-7f67692fc1dd
+
+	/// PLACEHOLDER: Requires stage_id. Formula will be: DIVIDE([Hired], [Hired] + [Did Not Hire], 0)
+	measure 'Conversion Rate' = BLANK()
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: aaae56a6-8fef-4eb3-8a9a-9778fc0ccd11
+
+	column id
+		dataType: string
+		lineageTag: b4ded311-9728-4dc2-9153-ef7c57bb67e4
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: 64f8514c-18a0-40c5-b8a3-e557ad3bfa0d
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: f3473c4d-de1c-49a0-aa47-7630ac0c7097
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: a962e6c1-bca9-4f89-be3c-d37a26287e70
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: 10fd8e46-0642-4f8e-b3e9-8bdc43e579c9
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 2cfb9ea3-b788-4271-886f-744dfd110424
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column phone
+		dataType: string
+		lineageTag: 0bc2bc2f-c838-436d-81bc-9768a52bf4c3
+		summarizeBy: none
+		sourceColumn: phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 29d4bd62-d6ce-4c65-8b61-2f73e1c661cc
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: edf89e07-21d0-42e2-aab0-75348a8aa725
+			defaultHierarchy: LocalDateTable_a283130a-14a3-4f2f-ad07-033b8ce5a882.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f8fb4625-dbbb-461a-963e-67250b3d04ed
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		variation Variation
+			isDefault
+			relationship: d7cc6016-6a72-4f8f-85f4-6a772e443c41
+			defaultHierarchy: LocalDateTable_204d5f0a-d3fc-4366-8c3e-bede0652841a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column _skyvia_sync
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 25648ee7-afe6-4888-9513-19ea67fcdd89
+		summarizeBy: none
+		sourceColumn: _skyvia_sync
+
+		variation Variation
+			isDefault
+			relationship: ee0cd690-c95a-4047-a02d-25eca4797c15
+			defaultHierarchy: LocalDateTable_3e45ed87-6823-4136-ac99-c1029e5c4ef3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Charge
+		dataType: string
+		lineageTag: e781673c-c6f2-4cf2-912d-01f490c5b403
+		summarizeBy: none
+		sourceColumn: CF_Charge
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Type_of_Charge
+		dataType: string
+		lineageTag: 1d84401d-278a-4645-9cdc-4198101dd521
+		summarizeBy: none
+		sourceColumn: CF_Type_of_Charge
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Court_Jurisdiction
+		dataType: string
+		lineageTag: bf4aa447-6b7b-4fe7-87eb-447dd3e8ae08
+		summarizeBy: none
+		sourceColumn: CF_Court_Jurisdiction
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Case_Number
+		dataType: string
+		lineageTag: e392d3d0-68b4-4040-9be4-60cf6d28f143
+		summarizeBy: none
+		sourceColumn: CF_Case_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Next_Court_Date
+		dataType: string
+		lineageTag: a529aab5-9d3e-4e86-bbe0-7030ecfbbae1
+		summarizeBy: none
+		sourceColumn: CF_Next_Court_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Admin_Per_Say_Issued
+		dataType: string
+		lineageTag: 1de18629-a821-4f5f-bec8-42df8d725cf8
+		summarizeBy: none
+		sourceColumn: CF_Admin_Per_Say_Issued
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Breath_Test_Submitted
+		dataType: string
+		lineageTag: 4c15393b-2d08-45a9-8700-edb913aa69c9
+		summarizeBy: none
+		sourceColumn: CF_Breath_Test_Submitted
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Breath_Test_Results
+		dataType: string
+		lineageTag: 25170ac7-89bc-4728-a467-94b1fec96b94
+		summarizeBy: none
+		sourceColumn: CF_Breath_Test_Results
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Blood_Draw_Taken
+		dataType: string
+		lineageTag: ab9c3d90-7002-42b7-9398-72c352647cd3
+		summarizeBy: none
+		sourceColumn: CF_Blood_Draw_Taken
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Pre_Indictment_Matter
+		dataType: string
+		lineageTag: 3444a022-223f-41bc-8980-d535063d82d6
+		summarizeBy: none
+		sourceColumn: CF_Pre_Indictment_Matter
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Bond_Issued
+		dataType: string
+		lineageTag: 3b05a41d-5483-485e-98a5-69adf4c59f43
+		summarizeBy: none
+		sourceColumn: CF_Bond_Issued
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Has_Bond_Been_Posted
+		dataType: string
+		lineageTag: a7732a98-8307-4898-acb3-1473a5bbe049
+		summarizeBy: none
+		sourceColumn: CF_Has_Bond_Been_Posted
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Date_of_Incident
+		dataType: string
+		lineageTag: f11e1e20-479c-4e5b-8b29-2bb07ec70ae7
+		summarizeBy: none
+		sourceColumn: CF_Date_of_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Location_of_Incident
+		dataType: string
+		lineageTag: 1c879dca-ccae-43c5-bf14-e39026847891
+		summarizeBy: none
+		sourceColumn: CF_Location_of_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_State_Where_Incident_Occurred
+		dataType: string
+		lineageTag: 6479560e-0fe4-43de-aad5-db0e85256a63
+		summarizeBy: none
+		sourceColumn: CF_State_Where_Incident_Occurred
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Address_Cross_Streets
+		dataType: string
+		lineageTag: 2be74842-6fbf-481a-bf52-2704d845d1c7
+		summarizeBy: none
+		sourceColumn: CF_Address_Cross_Streets
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Investigating_Agency
+		dataType: string
+		lineageTag: b9984257-6e61-4e59-a9ff-81de4b3b3ac8
+		summarizeBy: none
+		sourceColumn: CF_Investigating_Agency
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_LE_Report_Number
+		dataType: string
+		lineageTag: afda9cc4-bdd5-4c16-8b21-bbb7ab189652
+		summarizeBy: none
+		sourceColumn: CF_LE_Report_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Detailed_Narrative
+		dataType: string
+		lineageTag: b2f14763-4752-47e8-8a47-5559126cc714
+		summarizeBy: none
+		sourceColumn: CF_Detailed_Narrative
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Brief_Description_of_Incident
+		dataType: string
+		lineageTag: 1153b164-4ed8-4196-8554-f9029d7948da
+		summarizeBy: none
+		sourceColumn: CF_Brief_Description_of_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Case_Description
+		dataType: string
+		lineageTag: 4bb61122-af26-4853-88f7-401d1b3c9708
+		summarizeBy: none
+		sourceColumn: CF_Case_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Additional_Notes
+		dataType: string
+		lineageTag: 08f1b8b8-f7c6-4a36-b713-eb12af4c412b
+		summarizeBy: none
+		sourceColumn: CF_Additional_Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Is_PNC_In_Custody
+		dataType: string
+		lineageTag: ae1b08c6-0a92-475b-bff6-b894a9fd4e66
+		summarizeBy: none
+		sourceColumn: CF_Is_PNC_In_Custody
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Are_Charges_Pending
+		dataType: string
+		lineageTag: bdc43be8-efa5-4b61-b35e-ffd1b49cf19f
+		summarizeBy: none
+		sourceColumn: CF_Are_Charges_Pending
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Prior_Convictions
+		dataType: string
+		lineageTag: 62fbe0b4-0a26-4db2-a0e5-65710c36c9c6
+		summarizeBy: none
+		sourceColumn: CF_Prior_Convictions
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Prior_Criminal_History_Charges
+		dataType: string
+		lineageTag: dcae6803-cdb7-451f-a775-26d93440bf28
+		summarizeBy: none
+		sourceColumn: CF_Prior_Criminal_History_Charges
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Currently_Have_Representation
+		dataType: string
+		lineageTag: 3a4b3079-fffe-44cd-b759-af7f52e144e8
+		summarizeBy: none
+		sourceColumn: CF_Currently_Have_Representation
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Name_of_Current_Representation
+		dataType: string
+		lineageTag: dc508a4a-f222-4832-a256-659ae8cfe7b7
+		summarizeBy: none
+		sourceColumn: CF_Name_of_Current_Representation
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Was_There_A_Victim
+		dataType: string
+		lineageTag: 1e77ed4f-51ae-4a34-9b45-1a0b09267daf
+		summarizeBy: none
+		sourceColumn: CF_Was_There_A_Victim
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Who_Was_The_Victim
+		dataType: string
+		lineageTag: b9a3b37c-e4eb-4645-80b5-d7a284c4f07c
+		summarizeBy: none
+		sourceColumn: CF_Who_Was_The_Victim
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Victim_Present_At_Consultation
+		dataType: string
+		lineageTag: 0b2cd2e4-7523-4f1e-b10d-14b429b5c8bf
+		summarizeBy: none
+		sourceColumn: CF_Victim_Present_At_Consultation
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Weapon_Involved
+		dataType: string
+		lineageTag: 86732f45-a21c-4405-92e5-27381c228a96
+		summarizeBy: none
+		sourceColumn: CF_Weapon_Involved
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Type_of_Injury
+		dataType: string
+		lineageTag: 118afaff-2827-47f3-8cb1-507c03d59c92
+		summarizeBy: none
+		sourceColumn: CF_Type_of_Injury
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_What_Are_Your_Injuries
+		dataType: string
+		lineageTag: f38f052c-fca3-4dac-906c-e839c540d5c6
+		summarizeBy: none
+		sourceColumn: CF_What_Are_Your_Injuries
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Were_You_At_Fault
+		dataType: string
+		lineageTag: c02814db-96fa-4b78-a3f4-9d87f143eab4
+		summarizeBy: none
+		sourceColumn: CF_Were_You_At_Fault
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Injured_Because_of_Incident
+		dataType: string
+		lineageTag: 2267e49c-68ee-45bd-ae74-940aa477bdbe
+		summarizeBy: none
+		sourceColumn: CF_Injured_Because_of_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Plan_to_Seek_Further_Treatment
+		dataType: string
+		lineageTag: d18c2779-1d0b-4cb5-9d01-b2bf2bf67597
+		summarizeBy: none
+		sourceColumn: CF_Plan_to_Seek_Further_Treatment
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Transported_By_Ambulance
+		dataType: string
+		lineageTag: f9395ba3-fb0e-40df-b367-d475b7b275e5
+		summarizeBy: none
+		sourceColumn: CF_Transported_By_Ambulance
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Ambulance_Company
+		dataType: string
+		lineageTag: 82bf8e97-a974-4258-a20a-c06803cd43e0
+		summarizeBy: none
+		sourceColumn: CF_Ambulance_Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Did_LE_Arrive_On_Scene
+		dataType: string
+		lineageTag: e950eabc-4c39-460c-8590-3a3d7fb7267c
+		summarizeBy: none
+		sourceColumn: CF_Did_LE_Arrive_On_Scene
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Was_Anyone_Cited
+		dataType: string
+		lineageTag: 8939d707-12c8-4a21-ac55-5c85553b8ab9
+		summarizeBy: none
+		sourceColumn: CF_Was_Anyone_Cited
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Passenger_Count
+		dataType: string
+		lineageTag: 6b24018b-b0b1-4b29-8702-09c61071e703
+		summarizeBy: none
+		sourceColumn: CF_Passenger_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Property_Damage_Description
+		dataType: string
+		lineageTag: b346445a-2504-4692-9a59-a81b0c9a86ad
+		summarizeBy: none
+		sourceColumn: CF_Property_Damage_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Police_Report_Number
+		dataType: string
+		lineageTag: ac54abb8-2aee-42e1-9986-ef6872190d80
+		summarizeBy: none
+		sourceColumn: CF_Police_Report_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Primary_Contact_Vehicle_Info
+		dataType: string
+		lineageTag: ef187272-3aa0-4d89-b37a-57ffdaa877c6
+		summarizeBy: none
+		sourceColumn: CF_Primary_Contact_Vehicle_Info
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Person_Ticketed
+		dataType: string
+		lineageTag: 63833756-29d5-43a8-8562-5bdddf41e49e
+		summarizeBy: none
+		sourceColumn: CF_Person_Ticketed
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Comments_on_Person_Ticketed
+		dataType: string
+		lineageTag: 78c9cee1-25bc-4e12-adec-09e7ed89a3a1
+		summarizeBy: none
+		sourceColumn: CF_Comments_on_Person_Ticketed
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Defendant_Vehicle_Info
+		dataType: string
+		lineageTag: b5317faf-5c50-463c-805e-960d34a4ffec
+		summarizeBy: none
+		sourceColumn: CF_Defendant_Vehicle_Info
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Driver_License
+		dataType: string
+		lineageTag: 3555afe9-a91e-4dcb-9592-e4eb20c07d0c
+		summarizeBy: none
+		sourceColumn: CF_Driver_License
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Name_of_Defendant
+		dataType: string
+		lineageTag: db33e963-3e73-4450-be26-396a0b1cbb3b
+		summarizeBy: none
+		sourceColumn: CF_Name_of_Defendant
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Insurance_Name
+		dataType: string
+		lineageTag: 43745266-deab-481f-9c86-537e78ef4183
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Insurance_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Claim_No
+		dataType: string
+		lineageTag: cba0ab8c-d367-4f5b-bd9a-17a4007753c0
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Claim_No
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Insurance_Policy_No
+		dataType: string
+		lineageTag: dc35a898-da69-4a52-81d2-c431dc06e1f4
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Insurance_Policy_No
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_Health_Insurance_Name
+		dataType: string
+		lineageTag: aac273b5-eee4-4d3e-8f54-a270640fe5fb
+		summarizeBy: none
+		sourceColumn: CF_Client_Health_Insurance_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_Health_Insurance_Policy_No
+		dataType: string
+		lineageTag: c0c98c32-ff83-4158-a332-67aad3815598
+		summarizeBy: none
+		sourceColumn: CF_Client_Health_Insurance_Policy_No
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_First_Party_Coverage_UM_UIM
+		dataType: string
+		lineageTag: c2e115fc-64dd-46e3-8e01-a13dc73fbc84
+		summarizeBy: none
+		sourceColumn: CF_First_Party_Coverage_UM_UIM
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_Vehicle_Insurance_Carrier
+		dataType: string
+		lineageTag: a63f90ca-972b-465b-80b8-318fb80c4173
+		summarizeBy: none
+		sourceColumn: CF_Client_Vehicle_Insurance_Carrier
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_1st_Party_Claim_No
+		dataType: string
+		lineageTag: b337e47c-ca2d-488f-8d9e-252550f6155e
+		summarizeBy: none
+		sourceColumn: CF_Client_1st_Party_Claim_No
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Policy_Limit_Per_Person
+		dataType: string
+		lineageTag: 803aac38-be8c-448a-8e6e-fde42937b9db
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Policy_Limit_Per_Person
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Policy_Limit_Per_Incident
+		dataType: string
+		lineageTag: 4062f419-0433-469d-973c-3d8dfaca9470
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Policy_Limit_Per_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_UM_Policy_Per_Person
+		dataType: string
+		lineageTag: f79a9d89-e1c1-47ab-bfca-c123e143dc68
+		summarizeBy: none
+		sourceColumn: CF_Client_UM_Policy_Per_Person
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_UM_Policy_Per_Incident
+		dataType: string
+		lineageTag: 0045d850-4ab1-4d23-a7bf-e7f531c92b75
+		summarizeBy: none
+		sourceColumn: CF_Client_UM_Policy_Per_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Current_Specials
+		dataType: string
+		lineageTag: 56fdd448-d3ab-41ca-95d2-4128dd4d178d
+		summarizeBy: none
+		sourceColumn: CF_Current_Specials
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_MedPay_Total_Coverage_Amount
+		dataType: string
+		lineageTag: b6c04dcf-81cf-48eb-bacf-462d5bf05998
+		summarizeBy: none
+		sourceColumn: CF_MedPay_Total_Coverage_Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Preferred_Language
+		dataType: string
+		lineageTag: d3a6c6d5-cbc8-48d5-9193-c320d1f9e7d1
+		summarizeBy: none
+		sourceColumn: CF_Preferred_Language
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Citizenship
+		dataType: string
+		lineageTag: 93fb2b59-2cc5-461a-b1fa-7ddf4fcdcb4e
+		summarizeBy: none
+		sourceColumn: CF_Citizenship
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Marital_Status
+		dataType: string
+		lineageTag: 95c65fed-402b-47bd-b9d9-69c14f6d0ced
+		summarizeBy: none
+		sourceColumn: CF_Marital_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Out_of_State_Client
+		dataType: string
+		lineageTag: 4b26aa88-5eaa-4884-a005-4ceb76442436
+		summarizeBy: none
+		sourceColumn: CF_Out_of_State_Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Communication_Preference
+		dataType: string
+		lineageTag: 8c13709e-863d-4964-a932-4bda180b829c
+		summarizeBy: none
+		sourceColumn: CF_Communication_Preference
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Same_Mailing_Address
+		dataType: string
+		lineageTag: 385ffdcb-18c2-4b16-8d31-085713b2c731
+		summarizeBy: none
+		sourceColumn: CF_Same_Mailing_Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Mailing_Address_Full
+		dataType: string
+		lineageTag: 8a42d2a0-7d9c-4911-b0c7-6ed02d6777a3
+		summarizeBy: none
+		sourceColumn: CF_Mailing_Address_Full
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Qualified_Lead
+		dataType: string
+		lineageTag: e45a4170-ee65-43e2-b116-2380b07cf563
+		summarizeBy: none
+		sourceColumn: CF_Qualified_Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Referred_To_Us_By
+		dataType: string
+		lineageTag: d5281f50-9694-49bd-875a-6fb6372a3356
+		summarizeBy: none
+		sourceColumn: CF_Referred_To_Us_By
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Referred_Case_Out_To
+		dataType: string
+		lineageTag: 76c35569-4cd7-469b-9df9-1cd9a7ac2e38
+		summarizeBy: none
+		sourceColumn: CF_Referred_Case_Out_To
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Next_Steps
+		dataType: string
+		lineageTag: 2ada1dc6-1765-4693-af0a-4a02dc971d7b
+		summarizeBy: none
+		sourceColumn: CF_Next_Steps
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Consultation_Outcome
+		dataType: string
+		lineageTag: b0096845-0286-4d4e-8fa8-4e05d9beca10
+		summarizeBy: none
+		sourceColumn: CF_Consultation_Outcome
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Retained_or_Email_Only
+		dataType: string
+		lineageTag: 54c83f0f-cb3c-4f76-ad33-c459aa6a98ca
+		summarizeBy: none
+		sourceColumn: CF_Retained_or_Email_Only
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Police_Report_Available
+		dataType: string
+		lineageTag: 4f6cc78a-228a-41dc-bc4e-7985ccca3eea
+		summarizeBy: none
+		sourceColumn: CF_Police_Report_Available
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Send_Form_Upload_Email
+		dataType: string
+		lineageTag: ba586314-8bd0-4d9b-8082-6acc0d1cf928
+		summarizeBy: none
+		sourceColumn: CF_Send_Form_Upload_Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Plaintiff
+		dataType: string
+		lineageTag: 415e1ade-f645-4d0a-85ec-813dff97458e
+		summarizeBy: none
+		sourceColumn: CF_Plaintiff
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Billing_Arrangement
+		dataType: string
+		lineageTag: 03bd06c6-0554-41ad-990b-c1491509880e
+		summarizeBy: none
+		sourceColumn: CF_Billing_Arrangement
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Fee_Agreement_Type_Criminal
+		dataType: string
+		lineageTag: febdae61-076a-430e-bfbe-fbe472ef735c
+		summarizeBy: none
+		sourceColumn: CF_Fee_Agreement_Type_Criminal
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Amount_Due_at_Signing
+		dataType: string
+		lineageTag: 1656d9a4-e7c8-43e5-bb7f-500d7f786380
+		summarizeBy: none
+		sourceColumn: CF_Amount_Due_at_Signing
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Balance_Due_In
+		dataType: string
+		lineageTag: 873efafb-d267-4682-8eba-aa8ad2dc3262
+		summarizeBy: none
+		sourceColumn: CF_Balance_Due_In
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Balance_Due_In_Full
+		dataType: string
+		lineageTag: 77cab7f4-9c6e-4615-b926-74f14bf97891
+		summarizeBy: none
+		sourceColumn: CF_Balance_Due_In_Full
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Payments_Start
+		dataType: string
+		lineageTag: 24f239d8-99b1-4a2d-a576-8c9b6df54382
+		summarizeBy: none
+		sourceColumn: CF_Payments_Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Send_Affirm_Offer
+		dataType: string
+		lineageTag: 5486ebb7-8da0-4199-803a-bd1ef5dcc06b
+		summarizeBy: none
+		sourceColumn: CF_Send_Affirm_Offer
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Send_Review_Request
+		dataType: string
+		lineageTag: 9faec01b-d683-4fc8-a7c2-399a0fd38fef
+		summarizeBy: none
+		sourceColumn: CF_Send_Review_Request
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Type_of_Wrongful_Death
+		dataType: string
+		lineageTag: 2e1e466b-473e-4bd3-8c7d-0fb9b751870a
+		summarizeBy: none
+		sourceColumn: CF_Type_of_Wrongful_Death
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Relationship_to_Decedent
+		dataType: string
+		lineageTag: 04d657da-c303-46af-8f55-8cbecfa982c6
+		summarizeBy: none
+		sourceColumn: CF_Relationship_to_Decedent
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Company_Negligence
+		dataType: string
+		lineageTag: 1eeb61c5-87a7-4dad-987d-bc985a5f0d11
+		summarizeBy: none
+		sourceColumn: CF_Company_Negligence
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Company_Incident_Report
+		dataType: string
+		lineageTag: 47493e39-502a-467a-9584-7c3e6fbc49b6
+		summarizeBy: none
+		sourceColumn: CF_Company_Incident_Report
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Company_Incident_Report_Number
+		dataType: string
+		lineageTag: f0fd075b-a489-46d2-89c2-cb49c26c6f4a
+		summarizeBy: none
+		sourceColumn: CF_Company_Incident_Report_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Incident_at_Place_of_Employment
+		dataType: string
+		lineageTag: 790ef49a-fdc5-4633-95ca-9e996d13893e
+		summarizeBy: none
+		sourceColumn: CF_Incident_at_Place_of_Employment
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Ok_With_500_Pre_Indictment_Fee
+		dataType: string
+		lineageTag: f07498f1-27a1-45d9-ba10-8dd9cb35ebce
+		summarizeBy: none
+		sourceColumn: CF_Ok_With_500_Pre_Indictment_Fee
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Ok_With_500_Jail_Visit_Fee
+		dataType: string
+		lineageTag: d3ada1df-2565-49fe-8b15-f2bfba260de2
+		summarizeBy: none
+		sourceColumn: CF_Ok_With_500_Jail_Visit_Fee
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Where_Being_Treated
+		dataType: string
+		lineageTag: c28d6eab-448f-441d-9e46-762b105a17ec
+		summarizeBy: none
+		sourceColumn: CF_Where_Being_Treated
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Did_You_Seek_Treatment
+		dataType: string
+		lineageTag: 6aff1314-72e9-4517-b7ae-c22e71b18277
+		summarizeBy: none
+		sourceColumn: CF_Did_You_Seek_Treatment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name' = FORMAT('Lawmatics-Prospects-Expanded'[created_at], "dddd")
+		dataType: string
+		lineageTag: 69f1dfd2-c8ac-40b9-bc52-6b872ebd5044
+		summarizeBy: none
+		sortByColumn: 'Day Sort'
+
+	column 'Day Sort' = WEEKDAY('Lawmatics-Prospects-Expanded'[created_at], 2)
+		dataType: int64
+		formatString: 0
+		lineageTag: 07086e1a-6bb7-4338-8bbd-6c69ef262f22
+		summarizeBy: none
+
+	column MonthStart = STARTOFMONTH('Lawmatics-Prospects-Expanded'[created_at])
+		dataType: dateTime
+		formatString: mmmm yyyy
+		lineageTag: bb4bc385-1121-4fa3-bf20-19b7210bffb3
+		summarizeBy: none
+
+	column 'Start of Month' = DATE(YEAR('Lawmatics-Prospects-Expanded'[created_at]), MONTH('Lawmatics-Prospects-Expanded'[created_at]), 1)
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 06ff2f49-9c21-4086-b584-3eae59360c53
+		summarizeBy: none
+
+	column Value =
+			VAR RawText = 'Lawmatics-Prospects-Expanded'[CF_Amount_Due_at_Signing]
+			VAR Cleaned = SUBSTITUTE(SUBSTITUTE(RawText, "$", ""), ",", "")
+			RETURN IF(ISBLANK(RawText), BLANK(), VALUE(Cleaned))
+		dataType: double
+		lineageTag: 85b1933f-0539-418d-821b-b5a45866cc33
+		summarizeBy: sum
+
+	column 'Searched Box Data' =
+			VAR Sep = " "
+			RETURN
+			'Lawmatics-Prospects-Expanded'[name] & Sep &
+			'Lawmatics-Prospects-Expanded'[email] & Sep &
+			'Lawmatics-Prospects-Expanded'[phone] & Sep &
+			'Lawmatics-Prospects-Expanded'[CF_Charge] & Sep &
+			'Lawmatics-Prospects-Expanded'[CF_Type_of_Charge] & Sep &
+			'Lawmatics-Prospects-Expanded'[CF_Court_Jurisdiction] & Sep &
+			'Lawmatics-Prospects-Expanded'[CF_Case_Number] & Sep &
+			'Lawmatics-Prospects-Expanded'[CF_Referred_To_Us_By] & Sep &
+			'Lawmatics-Prospects-Expanded'[CF_Location_of_Incident] & Sep &
+			'Lawmatics-Prospects-Expanded'[CF_Brief_Description_of_Incident] & Sep &
+			'Lawmatics-Prospects-Expanded'[CF_Case_Description]
+		dataType: string
+		lineageTag: 00e1248f-aa5a-44aa-8c4f-d1539900fcd9
+		summarizeBy: none
+
+	partition Lawmatics-Prospects-Expanded = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    lawmatics_Schema = #"caramel-compass-452313-u3_Database"{[Name="lawmatics",Kind="Schema"]}[Data],
+				    #"Prospects-Expanded_View" = lawmatics_Schema{[Name="Prospects-Expanded",Kind="View"]}[Data]
+				in
+				    #"Prospects-Expanded_View"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Exception

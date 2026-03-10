@@ -1,0 +1,364 @@
+table Clio-PIMatterAccruals
+	lineageTag: 0a851163-4f63-4986-8a44-5f0e44adb984
+
+	column MatterId
+		dataType: int64
+		formatString: 0
+		lineageTag: 72ea323f-3597-45a4-88ce-e6e57a1c5d8b
+		summarizeBy: count
+		sourceColumn: MatterId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DisplayNumber
+		dataType: string
+		lineageTag: dc8a01fc-a00a-492c-a5c6-76195493172b
+		summarizeBy: none
+		sourceColumn: DisplayNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MatterName
+		dataType: string
+		lineageTag: d907e9b7-aa65-4e5a-b7e2-fc785760c0e3
+		summarizeBy: none
+		sourceColumn: MatterName
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpenDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ee176ec2-1865-48fa-b10f-2ab0253c7bc2
+		summarizeBy: none
+		sourceColumn: OpenDate
+
+		variation Variation
+			isDefault
+			relationship: 4b9a7f0e-b395-43d9-80e7-d141cafc1819
+			defaultHierarchy: LocalDateTable_3c483206-094f-427e-a6b0-df474e175f61.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PracticeAreaName
+		dataType: string
+		lineageTag: c38f220f-35f9-4a8f-b2e1-eb4d32e0d196
+		summarizeBy: none
+		sourceColumn: PracticeAreaName
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedSettlementDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1e4ca57b-cc5a-4885-a70d-ac98112d3361
+		summarizeBy: none
+		sourceColumn: EstimatedSettlementDate
+
+		variation Variation
+			isDefault
+			relationship: 0002650c-fea2-48d4-bd44-19a55c41bd9c
+			defaultHierarchy: LocalDateTable_4cddb9c8-bc98-4f85-90d2-14f42f50c6ee.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActualSettlementDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8fbc9cfb-3681-4f5b-ba2b-ab5fe4022d86
+		summarizeBy: none
+		sourceColumn: ActualSettlementDate
+
+		variation Variation
+			isDefault
+			relationship: 6f5091c7-fc0f-4668-8955-0aa145c616b0
+			defaultHierarchy: LocalDateTable_ef3b7a6a-26be-483b-a5cf-63e2be578846.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SettlementDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 17831b19-7a4f-4915-9e3a-c728eb645c78
+		summarizeBy: none
+		sourceColumn: SettlementDate
+
+		variation Variation
+			isDefault
+			relationship: e598a7b3-6acd-40d0-8dbb-9a476144317f
+			defaultHierarchy: LocalDateTable_5b488a9c-a092-4b85-adaf-9c08d054d83c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstimatedDistributionDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 24e5b888-898f-4de1-b92c-1330e1674a2d
+		summarizeBy: none
+		sourceColumn: EstimatedDistributionDate
+
+		variation Variation
+			isDefault
+			relationship: f1d050e3-2e7f-417c-8b2e-817cf33bb8db
+			defaultHierarchy: LocalDateTable_dbf901f2-c7af-4500-a6bd-0c8b8a8cdf0d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActualDistributionDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7aa06011-011c-4ab0-8eb1-62e7b80811d9
+		summarizeBy: none
+		sourceColumn: ActualDistributionDate
+
+		variation Variation
+			isDefault
+			relationship: 2c8d7c39-b26e-4160-b138-cfe717bb0081
+			defaultHierarchy: LocalDateTable_d44b4bfe-dfc9-406b-9d06-ca0c2f5c259d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DistributionDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e872e934-da47-4cc9-b6e6-2dd5e21dbf90
+		summarizeBy: none
+		sourceColumn: DistributionDate
+
+		variation Variation
+			isDefault
+			relationship: a87bbb3f-99e0-4752-949b-b272bb8d3a58
+			defaultHierarchy: LocalDateTable_7f217330-1dfe-49cf-95b2-76b25543c203.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstimatedValue
+		dataType: double
+		lineageTag: e98be857-061d-468a-84bc-00aee5aa605b
+		summarizeBy: sum
+		sourceColumn: EstimatedValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActualValue
+		dataType: double
+		lineageTag: fabbcf0c-4694-45e2-a825-53c8c0ca4944
+		summarizeBy: sum
+		sourceColumn: ActualValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Value
+		dataType: double
+		lineageTag: 3c3d5fc7-8fbe-4f65-806f-da1532a65c18
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OfCounselFeePercentage
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d696b14-7ec1-4668-ab87-63e4817d527f
+		summarizeBy: sum
+		sourceColumn: OfCounselFeePercentage
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReferralFeePercentage
+		dataType: int64
+		formatString: 0
+		lineageTag: c9d7a34f-db07-4053-b0ea-460d7930f320
+		summarizeBy: sum
+		sourceColumn: ReferralFeePercentage
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedFirmFees
+		dataType: double
+		lineageTag: 04332cd8-03ab-4822-bfb7-48f22fd89ab4
+		summarizeBy: sum
+		sourceColumn: EstimatedFirmFees
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActualFirmFees
+		dataType: double
+		lineageTag: b1b262f9-a215-4201-9214-e0f72e5cbf0d
+		summarizeBy: sum
+		sourceColumn: ActualFirmFees
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FirmFees
+		dataType: double
+		lineageTag: f85f4a38-2d2b-47d4-aba8-d2665d305f94
+		summarizeBy: sum
+		sourceColumn: FirmFees
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MonthDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a876fe97-e1d3-46d3-9f14-46304481278b
+		summarizeBy: none
+		sourceColumn: MonthDate
+
+		variation Variation
+			isDefault
+			relationship: bead2a23-a0d3-450f-8a75-1e1a32590b4b
+			defaultHierarchy: LocalDateTable_2ebcbb37-d9a3-427f-91f3-dea02373c9b7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YearMonth
+		dataType: string
+		lineageTag: d6676886-9dac-40b1-a720-6b5372d353ba
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValueAccruedAmountThisMonth
+		dataType: double
+		lineageTag: dd9158a4-1561-421c-8038-aa8957bfb68d
+		summarizeBy: sum
+		sourceColumn: ValueAccruedAmountThisMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValueAccruedToDate
+		dataType: double
+		lineageTag: f6c93145-7174-4e02-bd31-3432b0cdc22e
+		summarizeBy: sum
+		sourceColumn: ValueAccruedToDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValueOutstandingBalance
+		dataType: double
+		lineageTag: c12f7123-e26c-46da-a0a4-7bc6e3cb2e08
+		summarizeBy: sum
+		sourceColumn: ValueOutstandingBalance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValuePaymentAmountThisMonth
+		dataType: double
+		lineageTag: fdb93b98-6880-4668-909b-52b5a013f16d
+		summarizeBy: sum
+		sourceColumn: ValuePaymentAmountThisMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValuePaidToDate
+		dataType: double
+		lineageTag: 05c1e19a-1143-4637-afbc-6184b11ab894
+		summarizeBy: sum
+		sourceColumn: ValuePaidToDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FirmFeesAccruedAmountThisMonth
+		dataType: double
+		lineageTag: c2f86f09-abe5-4dbd-a4ed-a51b2ed160e3
+		summarizeBy: sum
+		sourceColumn: FirmFeesAccruedAmountThisMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FirmFeesAccruedToDate
+		dataType: double
+		lineageTag: 9a82c3e5-8f27-4f26-b133-a48ddfb36f6f
+		summarizeBy: sum
+		sourceColumn: FirmFeesAccruedToDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FirmFeesOutstandingBalance
+		dataType: double
+		lineageTag: 208c6fab-0ca1-4ee1-a353-e2e0441cc461
+		summarizeBy: sum
+		sourceColumn: FirmFeesOutstandingBalance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FirmFeesPaymentAmountThisMonth
+		dataType: double
+		lineageTag: 034d6889-6e8d-45e5-bbe8-2854ec8300b6
+		summarizeBy: sum
+		sourceColumn: FirmFeesPaymentAmountThisMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FirmFeesPaidToDate
+		dataType: double
+		lineageTag: e8057e0f-8e95-4f8f-be86-e06c0768e323
+		summarizeBy: sum
+		sourceColumn: FirmFeesPaidToDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Clio-PIMatterAccruals = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    clio_manage_Schema = #"caramel-compass-452313-u3_Database"{[Name="clio_manage",Kind="Schema"]}[Data],
+				    PIMatterAccruals_View = clio_manage_Schema{[Name="PIMatterAccruals",Kind="View"]}[Data]
+				in
+				    PIMatterAccruals_View
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

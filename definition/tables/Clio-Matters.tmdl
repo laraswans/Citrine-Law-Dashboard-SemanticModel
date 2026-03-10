@@ -1,0 +1,399 @@
+table Clio-Matters
+	lineageTag: 9662f993-87d6-4e54-97a9-dcfa037f1a6f
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 99849a3d-687f-4063-85a3-b46ed737f7eb
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etag
+		dataType: string
+		lineageTag: 148c051e-1fa0-48ce-a44f-d2809ab22199
+		summarizeBy: none
+		sourceColumn: Etag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 27478632-c261-4abe-a8d6-9e36cfe2e319
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 6440d116-fa47-4141-8aa0-574951bdfa81
+			defaultHierarchy: LocalDateTable_d05c103c-0b88-4f81-8c60-c61ce80eed3b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 273f3c18-be97-489a-a15f-374f07a81908
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 983f834a-8030-4cd9-9e02-a5202bdde4bf
+			defaultHierarchy: LocalDateTable_548e00af-cded-41f4-827a-e573969c0aa3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c0d45e7-a287-4e83-b762-7c49efaef044
+		summarizeBy: sum
+		sourceColumn: Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column DisplayNumber
+		dataType: string
+		lineageTag: 1d3aa738-c1af-4a6d-8df3-25114242caa9
+		summarizeBy: none
+		sourceColumn: DisplayNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomNumber
+		dataType: string
+		lineageTag: 10437899-4ca8-403a-b421-8be68e30831a
+		summarizeBy: none
+		sourceColumn: CustomNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 1bfbc316-ce11-4065-befb-988859f19177
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 7a24972a-4119-4c83-8f35-0939084b4741
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 22c48e5e-d1fa-425b-bcac-c276283d8aa4
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientReference
+		dataType: string
+		lineageTag: 0e799a0c-4103-4dd7-90a2-ea05e39546de
+		summarizeBy: none
+		sourceColumn: ClientReference
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b8587ed-b24e-4868-ac45-ddacfbab092f
+		summarizeBy: count
+		sourceColumn: ClientId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientName
+		dataType: string
+		lineageTag: e702ddab-35a6-46ef-af77-3eaef0b067db
+		summarizeBy: none
+		sourceColumn: ClientName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Billable
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 75817335-0f79-4414-a424-3e174318bba0
+		summarizeBy: none
+		sourceColumn: Billable
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaildropAddress
+		dataType: string
+		lineageTag: 51e8dde2-8c2d-4434-b2ce-079d10668e1c
+		summarizeBy: none
+		sourceColumn: MaildropAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingMethod
+		dataType: string
+		lineageTag: 29ff848a-2e5b-4620-abe4-40fa2226d66e
+		summarizeBy: none
+		sourceColumn: BillingMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpenDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1da88ded-7c35-4ad8-a7d2-d5378d16b6af
+		summarizeBy: none
+		sourceColumn: OpenDate
+
+		variation Variation
+			isDefault
+			relationship: 37177f1e-f815-4e09-bb2e-6946c66f8968
+			defaultHierarchy: LocalDateTable_b9fc85f8-c578-4939-9974-250672bc3e78.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CloseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b7283de7-acb8-46fc-8f29-2ed0e3f33c63
+		summarizeBy: none
+		sourceColumn: CloseDate
+
+		variation Variation
+			isDefault
+			relationship: 38de59ca-a665-4ac5-929b-c4c8b36df8bb
+			defaultHierarchy: LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PendingDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c9a2150c-b1ec-4bf5-921e-d5a029beb621
+		summarizeBy: none
+		sourceColumn: PendingDate
+
+		variation Variation
+			isDefault
+			relationship: 50f20615-ba5d-48c1-b655-158a3437b5ec
+			defaultHierarchy: LocalDateTable_0932a2f4-d6c4-4d19-87d1-79f9ff7c6b8a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Shared
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 323bb898-4ec2-4573-a317-33fe592e65be
+		summarizeBy: none
+		sourceColumn: Shared
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasTasks
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: aefd09ae-2c95-4fa9-816e-e79c575104ae
+		summarizeBy: none
+		sourceColumn: HasTasks
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastActivityDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d4721a85-c368-4a76-b41b-701cd82fb6d9
+		summarizeBy: none
+		sourceColumn: LastActivityDate
+
+		variation Variation
+			isDefault
+			relationship: 7be5f5be-badd-43a5-8d65-00c8f6e36923
+			defaultHierarchy: LocalDateTable_71ab0e89-d509-4924-8b88-670627b524fa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MatterStageUpdatedAt
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7135d793-4adb-4dc9-91ca-15052c31ac71
+		summarizeBy: none
+		sourceColumn: MatterStageUpdatedAt
+
+		variation Variation
+			isDefault
+			relationship: 26716774-7ce9-42be-97d1-060c3a369e4c
+			defaultHierarchy: LocalDateTable_e665356d-77df-4619-b9cf-da3944b2d79c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PracticeAreaId
+		dataType: int64
+		formatString: 0
+		lineageTag: bd3481fe-4b46-4e59-a86a-a58084fc56f9
+		summarizeBy: count
+		sourceColumn: PracticeAreaId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PracticeAreaName
+		dataType: string
+		lineageTag: 0dfd8673-25a5-4fda-bd6f-ef0b68ee5dd7
+		summarizeBy: none
+		sourceColumn: PracticeAreaName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MatterStageId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a873af1-a2d0-4638-97e8-754af81d75bc
+		summarizeBy: count
+		sourceColumn: MatterStageId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MatterStageName
+		dataType: string
+		lineageTag: 1280ed9f-f5dc-425a-a846-4d6bd96c1255
+		summarizeBy: none
+		sourceColumn: MatterStageName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsibleAttorneyId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c3857c3-e736-40c9-8fed-98abc161ebb6
+		summarizeBy: count
+		sourceColumn: ResponsibleAttorneyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsibleAttorneyName
+		dataType: string
+		lineageTag: 26168adf-8e8e-4db6-8126-0e730ee829e0
+		summarizeBy: none
+		sourceColumn: ResponsibleAttorneyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginatingAttorneyId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9fa3e936-f56e-4814-98ca-d0bc8eb06053
+		summarizeBy: count
+		sourceColumn: OriginatingAttorneyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginatingAttorneyName
+		dataType: string
+		lineageTag: c090022c-f4a1-4171-85db-b2c511ca7e95
+		summarizeBy: none
+		sourceColumn: OriginatingAttorneyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsibleStaffId
+		dataType: int64
+		formatString: 0
+		lineageTag: a4a717d6-a878-4b7e-93ac-7cf0588ae773
+		summarizeBy: count
+		sourceColumn: ResponsibleStaffId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsibleStaffName
+		dataType: string
+		lineageTag: 208c8b95-2fe2-4a4f-bf30-9e49a6030e9e
+		summarizeBy: none
+		sourceColumn: ResponsibleStaffName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsId
+		dataType: int64
+		formatString: 0
+		lineageTag: 83829658-e51d-4ab2-8260-4792315273b8
+		summarizeBy: count
+		sourceColumn: StatuteOfLimitationsId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsName
+		dataType: string
+		lineageTag: 7a234bb8-8c3b-4981-88da-148f0de58b72
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsStatus
+		dataType: string
+		lineageTag: adcf980e-8bcf-4c0f-af1a-2e8af44f7ed1
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsDescription
+		dataType: string
+		lineageTag: e8903c66-624f-4a7e-9c80-5f81e3dd4b55
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsPriority
+		dataType: string
+		lineageTag: 33d385f5-3907-4c62-b808-484b5a2925db
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsPriority
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsDueAt
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a5daadf4-7d73-46ee-ad42-9deb210b8a37
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsDueAt
+
+		variation Variation
+			isDefault
+			relationship: 08ed6a96-8e3b-4da9-bd57-7ece1413dbf4
+			defaultHierarchy: LocalDateTable_6c732ea2-c9db-45a3-a508-d663b58d3a5f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Clio-Matters = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    clio_manage_Schema = #"caramel-compass-452313-u3_Database"{[Name="clio_manage",Kind="Schema"]}[Data],
+				    Matters_Table = clio_manage_Schema{[Name="Matters",Kind="Table"]}[Data]
+				in
+				    Matters_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

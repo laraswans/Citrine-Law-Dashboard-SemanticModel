@@ -1,0 +1,559 @@
+relationship edf89e07-21d0-42e2-aab0-75348a8aa725
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Prospects-Expanded'.created_at
+	toColumn: LocalDateTable_a283130a-14a3-4f2f-ad07-033b8ce5a882.Date
+
+relationship d7cc6016-6a72-4f8f-85f4-6a772e443c41
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Prospects-Expanded'.updated_at
+	toColumn: LocalDateTable_204d5f0a-d3fc-4366-8c3e-bede0652841a.Date
+
+relationship ee0cd690-c95a-4047-a02d-25eca4797c15
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Prospects-Expanded'._skyvia_sync
+	toColumn: LocalDateTable_3e45ed87-6823-4136-ac99-c1029e5c4ef3.Date
+
+relationship 9f002556-e54c-455d-85a0-11d137d7d448
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-CustomFields'._skyvia_sync
+	toColumn: LocalDateTable_e5c85dec-4144-4e98-bd60-73b3d9b088ec.Date
+
+relationship 39a7a7de-6e9a-421d-8635-8041fbe71eb6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Contacts'.created_at
+	toColumn: LocalDateTable_76b4e46e-5550-4f57-9aff-03d901aca40a.Date
+
+relationship 6ba8253d-8ee6-4a2a-b91e-f22aacf85a94
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Contacts'.updated_at
+	toColumn: LocalDateTable_eb96b06e-2fc8-48bf-b9dc-a259e9a2ede5.Date
+
+relationship 8bfe49c0-259a-46bd-9a88-14f8f9b4b88b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Contacts'._skyvia_sync
+	toColumn: LocalDateTable_4dabad38-9c97-4066-8f2a-c43bf51166d8.Date
+
+relationship 7b036d21-133f-4157-b31a-62f3610b805c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Events'.start_date
+	toColumn: LocalDateTable_99934cce-47d6-4e3a-bb27-9944e6d99638.Date
+
+relationship e80b70d0-4640-4a7f-8ad0-03287618d382
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Events'.end_date
+	toColumn: LocalDateTable_31d276f7-8e33-47e4-914a-f39692fc7b17.Date
+
+relationship 1aa64208-0623-4261-a860-94950c06b081
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Events'.canceled_at
+	toColumn: LocalDateTable_94b76a0e-1cb4-4ee6-ba77-388652f7e122.Date
+
+relationship 9b2e1161-aafa-4ef2-b0af-8ca76f294f73
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Events'.created_at
+	toColumn: LocalDateTable_df127738-7fe6-48dc-87fe-a71fee7b55bd.Date
+
+relationship 024fd23a-b499-482e-81d0-c84f231f9ca6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Events'.updated_at
+	toColumn: LocalDateTable_d876d506-3bf6-4de5-bf7a-96e8525c5956.Date
+
+relationship b7d7fbae-0778-47ed-a3d6-e7fe3e666d90
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Events'._skyvia_sync
+	toColumn: LocalDateTable_3487c997-3b95-41ea-aa44-4947b70a17db.Date
+
+relationship c777d312-b25c-439f-9c3e-1fcae452c1e3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Expenses'.date
+	toColumn: LocalDateTable_b4dc4434-d113-4822-ada4-0bc0aa907d4c.Date
+
+relationship dbb3541e-3841-4654-b4ba-742ee12ec706
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Expenses'.created_at
+	toColumn: LocalDateTable_8b1024a6-ebdc-47d9-996f-2476830676b9.Date
+
+relationship 537d9be9-f19a-4df7-966e-0dee07b05be1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Expenses'.updated_at
+	toColumn: LocalDateTable_06b0a146-b708-4d9b-a06e-e44ab723607c.Date
+
+relationship 0cf74b22-b839-42fb-afa2-0a9d5a48a4a3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Expenses'._skyvia_sync
+	toColumn: LocalDateTable_eb4fa60b-7f1d-4cd7-a1a7-30d329876ab5.Date
+
+relationship 357e670a-4e92-4190-8984-ad23027ff3f3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Pipelines'.created_at
+	toColumn: LocalDateTable_12312be9-0249-4478-9d42-bb76eaca7520.Date
+
+relationship 99a59243-34b1-4621-a51c-fcacdee914e4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Pipelines'.updated_at
+	toColumn: LocalDateTable_d8d57d0f-b979-40c6-914f-bf3309ea5080.Date
+
+relationship bcf57b57-911f-4818-9de8-ccbc7e5a2e9d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Pipelines'._skyvia_sync
+	toColumn: LocalDateTable_00d1ee63-8fec-4b4d-b32d-956e64db4f41.Date
+
+relationship 85d18fef-c89e-4452-b3e0-986db0fdfd00
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Prospects'.created_at
+	toColumn: LocalDateTable_2280326f-a1ca-4ad0-9f14-3bd649abfab6.Date
+
+relationship 26e2fd77-60ee-4057-9e08-e021b5714085
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Prospects'.updated_at
+	toColumn: LocalDateTable_9c0a330d-32c6-4991-8f3f-a7576608d259.Date
+
+relationship fb5e86f2-0c07-4a9a-a23a-fea9723dc6b6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Prospects'._skyvia_sync
+	toColumn: LocalDateTable_768b2eef-9d25-4d70-9913-a5c2eeabc723.Date
+
+relationship 2047b97e-e450-4482-9651-33656d5e3ee2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Stages'.created_at
+	toColumn: LocalDateTable_b50be1c4-e4ea-47f0-acda-6e6ff86c0203.Date
+
+relationship 9c8a5fe0-72a3-4711-a5c5-faa82debec99
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Stages'.updated_at
+	toColumn: LocalDateTable_bc6a5e54-f89f-4e85-b3db-beac881b04d8.Date
+
+relationship bfe350f5-5237-4271-be97-0c883fb5745d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Stages'._skyvia_sync
+	toColumn: LocalDateTable_b1431903-b08f-4482-b533-94969a979ace.Date
+
+relationship 235f33fd-f73f-418c-8b37-ea8b644d93f1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-TimeEntries'.date
+	toColumn: LocalDateTable_b499819b-317b-4e31-abe2-353ec401c5d2.Date
+
+relationship bf71ab2a-bc7b-4dae-b28a-009de9240a90
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-TimeEntries'.created_at
+	toColumn: LocalDateTable_b22b91ec-8f31-48fe-bb6c-c9b71fe3bc13.Date
+
+relationship 7b2b61f2-41d6-4ba5-8b10-a8792e21a8ad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-TimeEntries'.updated_at
+	toColumn: LocalDateTable_e2a8f6e3-bffb-4f39-8d52-edf37c28e6b7.Date
+
+relationship 690d7dac-53e8-4349-a107-b758700af36e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-TimeEntries'._skyvia_sync
+	toColumn: LocalDateTable_515dc36e-6e06-46b2-82cb-908ae6f1c489.Date
+
+relationship d9da2875-24ff-44dd-a2c3-f2d0c8002830
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Users'.created_at
+	toColumn: LocalDateTable_6360e086-dc8d-4f8a-a2ea-a27934fa76e4.Date
+
+relationship 374c8444-64ce-4f17-b159-a2ed0371a612
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Users'.updated_at
+	toColumn: LocalDateTable_61572d92-32d0-4548-a960-132aaf2002e8.Date
+
+relationship a1b97b97-f28d-48ba-8830-bd0b3afaa0f7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Lawmatics-Users'._skyvia_sync
+	toColumn: LocalDateTable_38a3a2bf-95c0-4f0b-bfd2-fc162e2abe0e.Date
+
+relationship b3620553-f1fc-4fd4-8cf2-3fae8ffa4985
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedContacts'.CreatedDate
+	toColumn: LocalDateTable_a10391a4-1833-45bf-9f2e-b8104abc97f1.Date
+
+relationship 94b22f14-e101-4232-b478-b1d65d1cf8c6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedContacts'.UpdatedDate
+	toColumn: LocalDateTable_fce2069d-da3f-430a-ae01-6aa410a60245.Date
+
+relationship f8863078-3c32-4214-ac44-ca6671d10782
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedContacts'.DateOfBirth
+	toColumn: LocalDateTable_84208efd-f626-4dc4-ac39-5ed3c58af22e.Date
+
+relationship 778b369a-5ebb-45a1-ac2e-3a6a9a673163
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CreatedDate
+	toColumn: LocalDateTable_e124d6f3-e167-4ee1-bbbd-62bd74e638aa.Date
+
+relationship dee34395-7842-4cae-b917-f5e4c9466b94
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.UpdatedDate
+	toColumn: LocalDateTable_92185519-0d2e-4e64-b0f6-8c7ad5366faf.Date
+
+relationship c33c2d6a-632a-4969-9dee-957d0e692b82
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.OpenDate
+	toColumn: LocalDateTable_8f2891b4-f2b0-428a-bf4c-225566f21705.Date
+
+relationship bf422f9c-af0c-4340-b92c-2ac92dabd017
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CloseDate
+	toColumn: LocalDateTable_23b2a18f-0dc2-4140-85c1-8f89b9be4150.Date
+
+relationship 658b5eb3-432f-4e9e-a05d-e4bf91fdeb67
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.PendingDate
+	toColumn: LocalDateTable_dd6710c0-a037-4838-8500-5ea0c2d64bbf.Date
+
+relationship 53e4e19e-aa05-46a0-9df8-355406ad732d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.LastActivityDate
+	toColumn: LocalDateTable_adf5800f-44de-4639-b4ac-2327c89daaf1.Date
+
+relationship ec566188-2c80-457b-ae67-33c64f263cf1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.MatterStageUpdatedAt
+	toColumn: LocalDateTable_270ece6b-16f8-4990-8389-3bc0325f16de.Date
+
+relationship 333377c0-c4c5-407b-b2c3-43b7aba7ef47
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.StatuteOfLimitationsDueAt
+	toColumn: LocalDateTable_c1385a74-8788-43bf-8cbe-f06010738ba6.Date
+
+relationship d394e9b6-0835-4d98-997f-5a8c077ba8cf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Estimated_Distribution_Date
+	toColumn: LocalDateTable_a5609c38-b9a6-4c3e-9d98-0e4efeab3cc4.Date
+
+relationship de83c29a-9f56-413f-9af1-5b047cacd0f5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Estimated_Settlement_Date
+	toColumn: LocalDateTable_a85ef234-2d93-4732-9872-363c5436acec.Date
+
+relationship 513eec7a-22a6-421b-bbc4-d772bd46147b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Actual_Settlement_Date
+	toColumn: LocalDateTable_6e2acea4-ea92-40f6-bb3c-417126536940.Date
+
+relationship fe478a64-d30d-4f47-89e6-d94b491ac18d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Actual_Distribution_Date
+	toColumn: LocalDateTable_2d20b724-05f9-4ad8-bad9-9e4186741953.Date
+
+relationship 96754cad-ecd4-4801-9b52-3e3db28c3e5d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Date_of_Incident
+	toColumn: LocalDateTable_1e9672ee-2dc0-44e3-b292-973cbf148975.Date
+
+relationship bf6136c9-7de2-4afb-97eb-c69639463127
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_SOL__1st_Party_
+	toColumn: LocalDateTable_971dfcdc-a535-467c-94e2-c8cad254f4a0.Date
+
+relationship ce5e74c9-6dab-4249-9f45-2d4a01045d24
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_SOL__3rd_Party_
+	toColumn: LocalDateTable_017303e7-5bb2-4666-9d3e-e4f0dbc2da22.Date
+
+relationship e7b62384-381d-4d02-8a49-54fe09cce93b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_SOL__NOC_
+	toColumn: LocalDateTable_7750117f-b6e7-43ff-a822-6fcbd61788f6.Date
+
+relationship e248e0d8-d7f2-4568-a3d4-7ef7abfd119d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_DOB
+	toColumn: LocalDateTable_9f613006-1073-480c-ad03-e1cd7273bf9a.Date
+
+relationship fd3c3fe9-0613-4575-a84d-29d43118267a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Hire_Date
+	toColumn: LocalDateTable_b2297845-0c0c-4874-bfc2-8e08527c4721.Date
+
+relationship 94b6508b-57cd-466e-ba57-14f643fafa2d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Client_Done_Treating
+	toColumn: LocalDateTable_4d26abc9-9fd7-4e15-aeba-4cdd3262cf0c.Date
+
+relationship 2558fa69-8ea5-4ae3-a393-172fc78f2ba1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Demand_Ready
+	toColumn: LocalDateTable_4f1dd265-b00f-4cfe-9f19-5b356c001709.Date
+
+relationship 4952fff2-b465-4957-a4de-36ce8a23998e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Answer_Filed
+	toColumn: LocalDateTable_3c430ef8-fcf9-496a-ba1f-4501de014a82.Date
+
+relationship b6a3d769-c407-47e2-8508-4ab28d8d7fb5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_FIRM_SOL_CALENDARED
+	toColumn: LocalDateTable_ef036afa-ca72-4ce7-847a-6ba2cddedbf1.Date
+
+relationship 6698dc1e-7917-444b-87de-a4d47fe986f9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_SOFT_SOL_CALENDARED
+	toColumn: LocalDateTable_87030421-4188-4347-8e89-cf1bbc37084d.Date
+
+relationship 848f737b-f87a-4c2e-8aa4-c397393918db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Representation_Complete
+	toColumn: LocalDateTable_9a4303f7-44d0-4189-b66a-7ecb1963d28d.Date
+
+relationship ee921fd5-726f-4d6a-acdb-8a6af36c696c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_ADOT__Telephonic_Callback_Number
+	toColumn: LocalDateTable_27e1d8c5-8c2b-4d95-9d59-84189927b09a.Date
+
+relationship 54f9bf35-c806-4036-8b19-2a40a2fa4129
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_ADOT___Request_for_Hearing_Sent
+	toColumn: LocalDateTable_04e36e55-6700-47db-836b-bf1ac38c55cb.Date
+
+relationship d4d0edef-202f-443a-b1b5-3827775da4ba
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Phase_2_Completed
+	toColumn: LocalDateTable_8cf7f548-1c9b-45db-a4cb-5c01ca445dd6.Date
+
+relationship 4d57bcbe-72dc-4616-bf30-2efa3a911269
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Client_Treatment_Completed
+	toColumn: LocalDateTable_91289840-b5bc-425c-bfb5-5ae6b1ee5154.Date
+
+relationship 5498e52c-1289-458e-a2d9-8057562fe7b4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-DenormalizedMatters'.CF_Offer_Accepted_Phase_5a_Complete
+	toColumn: LocalDateTable_cdf4d522-053b-4ac2-a59b-6a8e707cfde1.Date
+
+relationship 4b9a7f0e-b395-43d9-80e7-d141cafc1819
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-PIMatterAccruals'.OpenDate
+	toColumn: LocalDateTable_3c483206-094f-427e-a6b0-df474e175f61.Date
+
+relationship 0002650c-fea2-48d4-bd44-19a55c41bd9c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-PIMatterAccruals'.EstimatedSettlementDate
+	toColumn: LocalDateTable_4cddb9c8-bc98-4f85-90d2-14f42f50c6ee.Date
+
+relationship 6f5091c7-fc0f-4668-8955-0aa145c616b0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-PIMatterAccruals'.ActualSettlementDate
+	toColumn: LocalDateTable_ef3b7a6a-26be-483b-a5cf-63e2be578846.Date
+
+relationship e598a7b3-6acd-40d0-8dbb-9a476144317f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-PIMatterAccruals'.SettlementDate
+	toColumn: LocalDateTable_5b488a9c-a092-4b85-adaf-9c08d054d83c.Date
+
+relationship f1d050e3-2e7f-417c-8b2e-817cf33bb8db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-PIMatterAccruals'.EstimatedDistributionDate
+	toColumn: LocalDateTable_dbf901f2-c7af-4500-a6bd-0c8b8a8cdf0d.Date
+
+relationship 2c8d7c39-b26e-4160-b138-cfe717bb0081
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-PIMatterAccruals'.ActualDistributionDate
+	toColumn: LocalDateTable_d44b4bfe-dfc9-406b-9d06-ca0c2f5c259d.Date
+
+relationship a87bbb3f-99e0-4752-949b-b272bb8d3a58
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-PIMatterAccruals'.DistributionDate
+	toColumn: LocalDateTable_7f217330-1dfe-49cf-95b2-76b25543c203.Date
+
+relationship bead2a23-a0d3-450f-8a75-1e1a32590b4b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-PIMatterAccruals'.MonthDate
+	toColumn: LocalDateTable_2ebcbb37-d9a3-427f-91f3-dea02373c9b7.Date
+
+relationship 8f43c09a-5f55-40a1-85de-2e2da04ebb92
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks-Expanded'.CreatedDate
+	toColumn: LocalDateTable_a467071b-9966-4567-b773-20494808106a.Date
+
+relationship bcb55277-695d-4abb-bb59-b4bb44d6d098
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks-Expanded'.UpdatedDate
+	toColumn: LocalDateTable_33c4abcc-f1af-4ff6-b7d0-ad2b86463a8e.Date
+
+relationship 05cc4644-601d-46f6-a4a4-c1c5a17e8ad7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks-Expanded'.DueDate
+	toColumn: LocalDateTable_c28b0b65-2ac4-4d5a-9fb7-75c62d516a8f.Date
+
+relationship 1056530f-7926-4938-9112-0a95b20d5c02
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks-Expanded'.CompletedDate
+	toColumn: LocalDateTable_4b40d9b1-92fe-4112-b205-3ac81105a572.Date
+
+relationship b34c56d3-9ebb-4ec9-a144-9dfc24c93a00
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks-Expanded'.custom_reference_date
+	toColumn: LocalDateTable_ecbf5653-fa2c-4289-8a68-cf5966c78d02.Date
+
+relationship 93fcac2a-2cea-49bf-aa7f-3b4049a7d0a4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Bills'.IssuedDate
+	toColumn: LocalDateTable_c5ed9d72-393c-4eae-9de7-a180a099bf22.Date
+
+relationship 00c29c46-ad5d-4741-bdf8-ac276811c681
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Bills'.CreatedDate
+	toColumn: LocalDateTable_4ddde534-0154-4c5d-9ea7-770a36dc3d7b.Date
+
+relationship 978daae9-b975-430f-8f00-4a52b531234c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Bills'.DueDate
+	toColumn: LocalDateTable_0fcf6927-02d4-44d1-a773-ed8a2f17fca4.Date
+
+relationship c85a3235-bc21-435e-88f3-eb82747e4c6e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Bills'.UpdatedDate
+	toColumn: LocalDateTable_9657888b-c5f4-4ead-b4c5-2627e10508e7.Date
+
+relationship 32da86ec-4a6d-489c-a231-19bd576ae4f4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Bills'.StartDate
+	toColumn: LocalDateTable_4a94f609-40c1-45e1-a370-f9b26b7b622e.Date
+
+relationship 4f46bedb-08ec-4e06-b772-3da356acb212
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Bills'.EndDate
+	toColumn: LocalDateTable_c82f550a-e9bf-42de-b50d-784ed72c6966.Date
+
+relationship 1bd2779d-1e6a-47c3-b54a-8f8c936405b3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Bills'.PaidDate
+	toColumn: LocalDateTable_5d890986-aa8a-466f-95aa-0cdd5c6088c0.Date
+
+relationship bd47b1f6-2664-45d9-bdc8-b3e6df940b3e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Bills'.LastSentDate
+	toColumn: LocalDateTable_3143d2b6-8052-41fc-9de5-ac1ad0c05886.Date
+
+relationship b042baa4-36aa-405d-b2f3-e4ebcda1ced2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-ContactCustomFieldValues'.CreatedDate
+	toColumn: LocalDateTable_8dbc8f8b-376e-4a90-90dd-9e2fb68ab5a1.Date
+
+relationship 1a1af5d5-8df7-4f37-a08d-ed5d1d24c8c5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-ContactCustomFieldValues'.UpdatedDate
+	toColumn: LocalDateTable_a63d4288-1e50-46a4-949e-d4e3dec02f5b.Date
+
+relationship 9b2493de-4e3b-400e-8c0d-b17fd8d5dc1a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-MatterCustomFieldValues'.CreatedDate
+	toColumn: LocalDateTable_31a9e2e0-6671-4f92-8e33-ecf471afc112.Date
+
+relationship b41c1552-c375-439d-85d2-4ffbb674938d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-MatterCustomFieldValues'.UpdatedDate
+	toColumn: LocalDateTable_02b3576d-9a6b-4e72-bef5-b523238753d2.Date
+
+relationship 3e870df5-3354-49da-a58c-0ffc0fa4fd1a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Contacts'.CreatedDate
+	toColumn: LocalDateTable_0cc8e10f-6f91-48e2-94c3-9cc64e2943f0.Date
+
+relationship a42362f8-227d-468d-bb8c-c172e5b23e55
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Contacts'.UpdatedDate
+	toColumn: LocalDateTable_28a46514-5ddd-4437-bcf5-2b34a8a5fce1.Date
+
+relationship e9b051dd-7170-4a96-9f4f-7f6971ac6924
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Contacts'.DateOfBirth
+	toColumn: LocalDateTable_4b87a14c-d2c2-4cae-b310-170250c0aac8.Date
+
+relationship 6440d116-fa47-4141-8aa0-574951bdfa81
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Matters'.CreatedDate
+	toColumn: LocalDateTable_d05c103c-0b88-4f81-8c60-c61ce80eed3b.Date
+
+relationship 983f834a-8030-4cd9-9e02-a5202bdde4bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Matters'.UpdatedDate
+	toColumn: LocalDateTable_548e00af-cded-41f4-827a-e573969c0aa3.Date
+
+relationship 37177f1e-f815-4e09-bb2e-6946c66f8968
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Matters'.OpenDate
+	toColumn: LocalDateTable_b9fc85f8-c578-4939-9974-250672bc3e78.Date
+
+relationship 38de59ca-a665-4ac5-929b-c4c8b36df8bb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Matters'.CloseDate
+	toColumn: LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5.Date
+
+relationship 50f20615-ba5d-48c1-b655-158a3437b5ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Matters'.PendingDate
+	toColumn: LocalDateTable_0932a2f4-d6c4-4d19-87d1-79f9ff7c6b8a.Date
+
+relationship 7be5f5be-badd-43a5-8d65-00c8f6e36923
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Matters'.LastActivityDate
+	toColumn: LocalDateTable_71ab0e89-d509-4924-8b88-670627b524fa.Date
+
+relationship 26716774-7ce9-42be-97d1-060c3a369e4c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Matters'.MatterStageUpdatedAt
+	toColumn: LocalDateTable_e665356d-77df-4619-b9cf-da3944b2d79c.Date
+
+relationship 08ed6a96-8e3b-4da9-bd57-7ece1413dbf4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Matters'.StatuteOfLimitationsDueAt
+	toColumn: LocalDateTable_6c732ea2-c9db-45a3-a508-d663b58d3a5f.Date
+
+relationship ea7ee5a4-6d99-4615-baff-833414725317
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Users'.CreatedDate
+	toColumn: LocalDateTable_e303352f-27cc-4282-b3d8-66cdb605f707.Date
+
+relationship 6342a9f6-4327-4274-b284-6a3fe63ee3ba
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Users'.UpdatedDate
+	toColumn: LocalDateTable_21c0f1c3-7fae-47c1-8c5f-dc29652c081a.Date
+
+relationship f8ba171b-b4e0-47f6-9c01-e3bbf76f0f79
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks'.CreatedDate
+	toColumn: LocalDateTable_d9a422f6-5cb1-4c63-8f77-2468beed11cc.Date
+
+relationship 5fdf1c19-fcb9-4dcf-8dbf-56df3ab97893
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks'.UpdatedDate
+	toColumn: LocalDateTable_1c270f1b-dbcc-472a-9ca2-ce2bcaa7edb3.Date
+
+relationship 9e2bff18-454f-4fbc-997a-691bb840f814
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks'.DueDate
+	toColumn: LocalDateTable_fcccb7cc-fc67-415a-9619-8f106e053361.Date
+
+relationship 14094135-5842-4e53-8a6f-02255ddcf03c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clio-Tasks'.CompletedDate
+	toColumn: LocalDateTable_6106b1d1-c7a7-429f-a40d-1c56e641a615.Date
+
+relationship AutoDetected_9b3728d5-7e0b-41cf-a96e-9c5a972d59fb
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	toCardinality: one
+	fromColumn: 'Clio-Tasks'.Etag
+	toColumn: 'Clio-Tasks-Expanded'.Etag
+
+relationship AutoDetected_107eca58-2605-4e71-8321-213a29730a3b
+	fromColumn: 'Clio-PIMatterAccruals'.DisplayNumber
+	toColumn: 'Clio-DenormalizedMatters'.DisplayNumber
+
+relationship AutoDetected_3b5b50a5-2a23-48b2-bf78-8654069317cd
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	toCardinality: one
+	fromColumn: 'Clio-Matters'.DisplayNumber
+	toColumn: 'Clio-DenormalizedMatters'.DisplayNumber
+
+relationship 182eebcd-e77f-2e6a-8259-5e857f8ca21e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	toCardinality: one
+	fromColumn: 'Clio-DenormalizedMatters'.MatchID
+	toColumn: 'Lawmatics-Prospects-Expanded'.id

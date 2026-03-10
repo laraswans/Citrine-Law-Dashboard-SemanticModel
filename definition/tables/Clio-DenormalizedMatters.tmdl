@@ -1,0 +1,1343 @@
+table Clio-DenormalizedMatters
+	lineageTag: 53296e8d-8ca7-4c26-9f19-4c2c2e3b55c4
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 05fbc578-5e2c-4e86-9f3e-a621c65e72a7
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etag
+		dataType: string
+		lineageTag: 3ef54b01-fa32-41e6-b1f2-b03365bad2eb
+		summarizeBy: none
+		sourceColumn: Etag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8d556fe8-f3d4-417c-a450-5e0e960bf3c7
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 778b369a-5ebb-45a1-ac2e-3a6a9a673163
+			defaultHierarchy: LocalDateTable_e124d6f3-e167-4ee1-bbbd-62bd74e638aa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2c792384-8a0b-4866-b8e2-26406d55a8bd
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: dee34395-7842-4cae-b917-f5e4c9466b94
+			defaultHierarchy: LocalDateTable_92185519-0d2e-4e64-b0f6-8c7ad5366faf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number
+		dataType: int64
+		formatString: 0
+		lineageTag: 59886426-99cb-4c88-bb7e-8ff8f732355d
+		summarizeBy: sum
+		sourceColumn: Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column DisplayNumber
+		dataType: string
+		lineageTag: d6f8a9b5-a3a9-40c5-b9fd-b8d1d3b2bd50
+		summarizeBy: none
+		sourceColumn: DisplayNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomNumber
+		dataType: string
+		lineageTag: 1d0d9f5c-490c-4c0e-8331-b4b45b4537c5
+		summarizeBy: none
+		sourceColumn: CustomNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 47a920ac-d7bd-4247-8eb6-aec35fc794ef
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 28412759-30dc-4f80-b55f-2ed53cf73602
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 9043f259-4a3e-4905-b780-3d7e7c8d00c5
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientReference
+		dataType: string
+		lineageTag: 8bf9104d-e033-4433-b0b2-1140e5c99ce3
+		summarizeBy: none
+		sourceColumn: ClientReference
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientId
+		dataType: int64
+		formatString: 0
+		lineageTag: 89c172f7-9293-4086-9baf-b563c0b949e0
+		summarizeBy: count
+		sourceColumn: ClientId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientName
+		dataType: string
+		lineageTag: aa356f16-7a2a-4fc8-91dd-be651fa3cb04
+		summarizeBy: none
+		sourceColumn: ClientName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Billable
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a8ff86f9-48c9-47bf-9553-8776dcf46a7f
+		summarizeBy: none
+		sourceColumn: Billable
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaildropAddress
+		dataType: string
+		lineageTag: cfd2c480-e8f5-4c26-a2d7-d353be5cc5fe
+		summarizeBy: none
+		sourceColumn: MaildropAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingMethod
+		dataType: string
+		lineageTag: c3c16d97-58d4-4922-bbd6-671f14572512
+		summarizeBy: none
+		sourceColumn: BillingMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpenDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b7642d27-acd0-48db-9924-0c39ededc83f
+		summarizeBy: none
+		sourceColumn: OpenDate
+
+		variation Variation
+			isDefault
+			relationship: c33c2d6a-632a-4969-9dee-957d0e692b82
+			defaultHierarchy: LocalDateTable_8f2891b4-f2b0-428a-bf4c-225566f21705.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CloseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 29a4482c-79db-48a3-8ccf-6f2fd6d97cf7
+		summarizeBy: none
+		sourceColumn: CloseDate
+
+		variation Variation
+			isDefault
+			relationship: bf422f9c-af0c-4340-b92c-2ac92dabd017
+			defaultHierarchy: LocalDateTable_23b2a18f-0dc2-4140-85c1-8f89b9be4150.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PendingDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e0f39c57-f539-4de0-a735-78e2ba4e1161
+		summarizeBy: none
+		sourceColumn: PendingDate
+
+		variation Variation
+			isDefault
+			relationship: 658b5eb3-432f-4e9e-a05d-e4bf91fdeb67
+			defaultHierarchy: LocalDateTable_dd6710c0-a037-4838-8500-5ea0c2d64bbf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Shared
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 91142faa-dd7c-4d59-bdaa-528bf6156ebd
+		summarizeBy: none
+		sourceColumn: Shared
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasTasks
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 00f50b64-5636-4f14-b81b-aa44fbe76a53
+		summarizeBy: none
+		sourceColumn: HasTasks
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastActivityDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f180eb7e-f53e-4157-8ae6-a9b13a34453b
+		summarizeBy: none
+		sourceColumn: LastActivityDate
+
+		variation Variation
+			isDefault
+			relationship: 53e4e19e-aa05-46a0-9df8-355406ad732d
+			defaultHierarchy: LocalDateTable_adf5800f-44de-4639-b4ac-2327c89daaf1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MatterStageUpdatedAt
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 76f19404-99f6-440c-b7e4-a4fc5a6fe5cc
+		summarizeBy: none
+		sourceColumn: MatterStageUpdatedAt
+
+		variation Variation
+			isDefault
+			relationship: ec566188-2c80-457b-ae67-33c64f263cf1
+			defaultHierarchy: LocalDateTable_270ece6b-16f8-4990-8389-3bc0325f16de.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PracticeAreaId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b802ab0-084d-4ea7-a6af-1b29fc494737
+		summarizeBy: count
+		sourceColumn: PracticeAreaId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PracticeAreaName
+		dataType: string
+		lineageTag: 116af1a6-c742-478e-836f-6b9425d2099a
+		summarizeBy: none
+		sourceColumn: PracticeAreaName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MatterStageId
+		dataType: int64
+		formatString: 0
+		lineageTag: 66ffda9f-1e7b-4006-a1da-9e93a0fc743e
+		summarizeBy: count
+		sourceColumn: MatterStageId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MatterStageName
+		dataType: string
+		lineageTag: c404a714-d2d6-45a1-927b-15073ee92796
+		summarizeBy: none
+		sourceColumn: MatterStageName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsibleAttorneyId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d54c185-f8fc-4844-bf6d-26c8dcb04496
+		summarizeBy: count
+		sourceColumn: ResponsibleAttorneyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsibleAttorneyName
+		dataType: string
+		lineageTag: 54e3ecc7-70c9-45a2-961e-d1ae2c6ef259
+		summarizeBy: none
+		sourceColumn: ResponsibleAttorneyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginatingAttorneyId
+		dataType: int64
+		formatString: 0
+		lineageTag: 226a62c4-a447-452a-bc00-0db8dc2aca99
+		summarizeBy: count
+		sourceColumn: OriginatingAttorneyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginatingAttorneyName
+		dataType: string
+		lineageTag: bbb52d2b-3d29-4e8a-b840-58d4ecec0c1e
+		summarizeBy: none
+		sourceColumn: OriginatingAttorneyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsibleStaffId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e37af74-5f2e-46d2-957b-aec4133f04c6
+		summarizeBy: count
+		sourceColumn: ResponsibleStaffId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsibleStaffName
+		dataType: string
+		lineageTag: d7884025-b4db-4ee7-bbe7-03332e781276
+		summarizeBy: none
+		sourceColumn: ResponsibleStaffName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsId
+		dataType: int64
+		formatString: 0
+		lineageTag: b79465b0-7be2-4949-82e0-f8619ab2e846
+		summarizeBy: count
+		sourceColumn: StatuteOfLimitationsId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsName
+		dataType: string
+		lineageTag: 44f15a39-45ab-4145-87c8-698768a76d98
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsStatus
+		dataType: string
+		lineageTag: 171bef16-3633-4da5-a415-5fbdd966df6e
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsDescription
+		dataType: string
+		lineageTag: 82974917-66bc-417e-8dba-b6b16365099f
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsPriority
+		dataType: string
+		lineageTag: 3b6d7795-fda0-4041-9188-a4e622ffcdd7
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsPriority
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitationsDueAt
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 55340b95-cb0d-430c-a1d3-e2c096f4bc17
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitationsDueAt
+
+		variation Variation
+			isDefault
+			relationship: 333377c0-c4c5-407b-b2c3-43b7aba7ef47
+			defaultHierarchy: LocalDateTable_c1385a74-8788-43bf-8cbe-f06010738ba6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Victim_Case
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 33e53ea5-00d5-4cf0-b98e-7b4e6c1a2f82
+		summarizeBy: none
+		sourceColumn: CF_Victim_Case
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Outbound_Provider_Referral
+		dataType: string
+		lineageTag: 281daf3b-192b-442a-a493-0a1e4c4ca6d3
+		summarizeBy: none
+		sourceColumn: CF_Outbound_Provider_Referral
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_1st_Party_Policy_No_
+		dataType: string
+		lineageTag: 6d3f8225-db3b-4af0-8ec9-bc07275cd4cc
+		summarizeBy: none
+		sourceColumn: CF_1st_Party_Policy_No_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Send_Review
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 55dbfb5f-808f-4bb5-b378-7341d6333c30
+		summarizeBy: none
+		sourceColumn: CF_Send_Review
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Estimated_Distribution_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 560d52ec-69d1-4753-8464-71e227e518ea
+		summarizeBy: none
+		sourceColumn: CF_Estimated_Distribution_Date
+
+		variation Variation
+			isDefault
+			relationship: d394e9b6-0835-4d98-997f-5a8c077ba8cf
+			defaultHierarchy: LocalDateTable_a5609c38-b9a6-4c3e-9d98-0e4efeab3cc4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Estimated_Firm_Fees_Amount
+		dataType: double
+		lineageTag: a6534a06-e517-4d8b-99e0-fa4e47b3cd2c
+		summarizeBy: sum
+		sourceColumn: CF_Estimated_Firm_Fees_Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Estimated_Settlement_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 955a7551-415b-48b3-b73e-4cd54a51a6e6
+		summarizeBy: none
+		sourceColumn: CF_Estimated_Settlement_Date
+
+		variation Variation
+			isDefault
+			relationship: de83c29a-9f56-413f-9af1-5b047cacd0f5
+			defaultHierarchy: LocalDateTable_a85ef234-2d93-4732-9872-363c5436acec.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Actual_Settlement_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 01f92d12-91f3-493f-8a03-0836bba45101
+		summarizeBy: none
+		sourceColumn: CF_Actual_Settlement_Date
+
+		variation Variation
+			isDefault
+			relationship: 513eec7a-22a6-421b-bbc4-d772bd46147b
+			defaultHierarchy: LocalDateTable_6e2acea4-ea92-40f6-bb3c-417126536940.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Current_Specials
+		dataType: double
+		lineageTag: f161ca4a-a76f-40cb-9947-e0e9b3abaa2e
+		summarizeBy: sum
+		sourceColumn: CF_Current_Specials
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Crystal_Ball_Notes
+		dataType: string
+		lineageTag: c4580d8b-d28e-4720-a696-6d2ed43f58bd
+		summarizeBy: none
+		sourceColumn: CF_Crystal_Ball_Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_TLAW_Originated_Case
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f04ded05-631e-40f2-9ffc-d833addee6e3
+		summarizeBy: none
+		sourceColumn: CF_TLAW_Originated_Case
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Actual_Value
+		dataType: double
+		lineageTag: 50660b7d-5cd3-4cca-b59a-4ea55abab6e1
+		summarizeBy: sum
+		sourceColumn: CF_Actual_Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Actual_Firm_Fees_Amount
+		dataType: double
+		lineageTag: 69c744fa-ec6a-4210-9fd9-998d3baf9a9c
+		summarizeBy: sum
+		sourceColumn: CF_Actual_Firm_Fees_Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Actual_Distribution_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 74aa02da-744f-42d1-8db4-1b643dca14fe
+		summarizeBy: none
+		sourceColumn: CF_Actual_Distribution_Date
+
+		variation Variation
+			isDefault
+			relationship: fe478a64-d30d-4f47-89e6-d94b491ac18d
+			defaultHierarchy: LocalDateTable_2d20b724-05f9-4ad8-bad9-9e4186741953.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Initial_Estimated_Value
+		dataType: double
+		lineageTag: 56fc41b0-2b7c-4653-8146-40350944006e
+		summarizeBy: sum
+		sourceColumn: CF_Initial_Estimated_Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Referral_Fee_Percentage
+		dataType: double
+		lineageTag: a9192c5a-1e94-4ba5-aaa3-20c3309b677a
+		summarizeBy: sum
+		sourceColumn: CF_Referral_Fee_Percentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Of_Counsel_Fee_Percentage
+		dataType: double
+		lineageTag: 756a979b-dfb2-4cc2-8e2d-f37123897c60
+		summarizeBy: sum
+		sourceColumn: CF_Of_Counsel_Fee_Percentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Out_of_State_Client
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1da8daa3-6922-4276-9cc7-d8867b1f5b3d
+		summarizeBy: none
+		sourceColumn: CF_Out_of_State_Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Matter_Stage_Pre_Lit
+		dataType: string
+		lineageTag: 3b4c6338-6150-45eb-969f-e04ddf616027
+		summarizeBy: none
+		sourceColumn: CF_Matter_Stage_Pre_Lit
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Claim_No_
+		dataType: string
+		lineageTag: 95da2279-cbfb-4702-b9a7-452ba037ba89
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Claim_No_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_1st_Party_Claim_No_
+		dataType: string
+		lineageTag: 36203b1a-fa3a-43d4-bc7e-7091d5e0da9d
+		summarizeBy: none
+		sourceColumn: CF_Client_1st_Party_Claim_No_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Insurance_Policy_No_
+		dataType: string
+		lineageTag: d7fb445f-8c9b-486d-90f0-3ee140a4a08e
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Insurance_Policy_No_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_MedPay_Total_Coverage_Amount
+		dataType: double
+		lineageTag: 6272b551-020c-41fe-8ad6-f82bbc85089f
+		summarizeBy: sum
+		sourceColumn: CF_MedPay_Total_Coverage_Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Court_Jurisdiction
+		dataType: string
+		lineageTag: d65f4062-a322-43a1-aaaa-745a9a1c3a1b
+		summarizeBy: none
+		sourceColumn: CF_Court_Jurisdiction
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Policy_Limit_Per_Person
+		dataType: double
+		lineageTag: 8f433570-4c88-41ff-8943-1d21d84850cd
+		summarizeBy: sum
+		sourceColumn: CF_Adverse_Policy_Limit_Per_Person
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Adverse_Policy_Limit_Per_Incident
+		dataType: double
+		lineageTag: 22b8a960-4d68-4fef-99e1-27b9fdb2c2bd
+		summarizeBy: sum
+		sourceColumn: CF_Adverse_Policy_Limit_Per_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_UM_Policy_Limit_Per_Person
+		dataType: double
+		lineageTag: 5ecb100a-7e60-48b4-9f0c-7b4d5ef66ae8
+		summarizeBy: sum
+		sourceColumn: CF_UM_Policy_Limit_Per_Person
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_UM_Policy_Limit_Per_Incident
+		dataType: double
+		lineageTag: 571e114e-77eb-43e0-8d93-33e4524322d4
+		summarizeBy: sum
+		sourceColumn: CF_UM_Policy_Limit_Per_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_UIM_Policy_Limit_Per_Person
+		dataType: double
+		lineageTag: 97e6c959-117d-4301-a2f5-74577ddfb63b
+		summarizeBy: sum
+		sourceColumn: CF_UIM_Policy_Limit_Per_Person
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_UIM_Policy_Limit_Per_Incident
+		dataType: double
+		lineageTag: f075043e-f5f9-4a7a-b980-20c23ee4d808
+		summarizeBy: sum
+		sourceColumn: CF_UIM_Policy_Limit_Per_Incident
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_Attorney_Bar_No_
+		dataType: string
+		lineageTag: 0ae21f0e-1655-4ff5-b588-f389fbb254dd
+		summarizeBy: none
+		sourceColumn: CF_Attorney_Bar_No_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Insurance_Carrier
+		dataType: string
+		lineageTag: 215d4f6c-eef7-4897-98e8-ab9675c96e0a
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Insurance_Carrier
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Adjuster
+		dataType: string
+		lineageTag: f4df6a81-b91f-45b6-af0b-d6032295d6d6
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Adjuster
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_UM_UIM_Adjuster
+		dataType: string
+		lineageTag: f0c85979-e516-4196-9412-039fc92ffe7b
+		summarizeBy: none
+		sourceColumn: CF_UM_UIM_Adjuster
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_UM_UIM_Insurance_Carrier
+		dataType: string
+		lineageTag: ae2fdec9-3213-4262-8d64-2f8e64adf774
+		summarizeBy: none
+		sourceColumn: CF_UM_UIM_Insurance_Carrier
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_UM_UIM_Ins__Additional_Carrier
+		dataType: string
+		lineageTag: c3aad812-897a-4ee3-9ad7-2b180faae12d
+		summarizeBy: none
+		sourceColumn: CF_UM_UIM_Ins__Additional_Carrier
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_UM_UIM_Ins__Additional_Adjuster
+		dataType: string
+		lineageTag: 76c9437e-5077-4439-bbd9-a0136b412a97
+		summarizeBy: none
+		sourceColumn: CF_UM_UIM_Ins__Additional_Adjuster
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Name_of_Defendant__s_
+		dataType: string
+		lineageTag: cae0d353-1ed4-4cde-a31e-4999dd76c9ec
+		summarizeBy: none
+		sourceColumn: CF_Name_of_Defendant__s_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Date_of_Incident
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 559bebe7-3edc-4e58-885f-645b4367a4a1
+		summarizeBy: none
+		sourceColumn: CF_Date_of_Incident
+
+		variation Variation
+			isDefault
+			relationship: 96754cad-ecd4-4801-9b52-3e3db28c3e5d
+			defaultHierarchy: LocalDateTable_1e9672ee-2dc0-44e3-b292-973cbf148975.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Insurance_Company_Name
+		dataType: string
+		lineageTag: 1e84b634-b063-4d24-b94c-05a5d2e4fb37
+		summarizeBy: none
+		sourceColumn: CF_Insurance_Company_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_PI_Litigation_Tier_
+		dataType: string
+		lineageTag: b4b77423-2657-427e-8225-01b445ac81b6
+		summarizeBy: none
+		sourceColumn: CF_PI_Litigation_Tier_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Pre_Litigation_Status_
+		dataType: string
+		lineageTag: b330ff8a-e48d-4938-b2a2-33427548e554
+		summarizeBy: none
+		sourceColumn: CF_Pre_Litigation_Status_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Litigation_Status
+		dataType: string
+		lineageTag: adfcee24-b602-4600-82ab-e75a0994d570
+		summarizeBy: none
+		sourceColumn: CF_Litigation_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_PI_Matter_Status
+		dataType: string
+		lineageTag: 9ed8708c-0051-47ab-a3af-b524f26ac11c
+		summarizeBy: none
+		sourceColumn: CF_PI_Matter_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Adverse_Insurance_Name
+		dataType: string
+		lineageTag: 77f54ade-3a99-46e1-a6b7-93361c58145b
+		summarizeBy: none
+		sourceColumn: CF_Adverse_Insurance_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_1st_Party_Insurance_Name
+		dataType: string
+		lineageTag: 85cfff1b-af8e-4e40-ba2b-8bbdb5385223
+		summarizeBy: none
+		sourceColumn: CF_Client_1st_Party_Insurance_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Immigration_Status
+		dataType: string
+		lineageTag: 6eb9000f-fb53-42bf-9cfc-88c188daf826
+		summarizeBy: none
+		sourceColumn: CF_Immigration_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Preferred_Language
+		dataType: string
+		lineageTag: ba3cf1d0-e8d2-4db0-8cd0-0842992c113e
+		summarizeBy: none
+		sourceColumn: CF_Preferred_Language
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Emergency_Point_of_Contact
+		dataType: string
+		lineageTag: a34385ab-de84-4f56-aacd-b2b476741437
+		summarizeBy: none
+		sourceColumn: CF_Emergency_Point_of_Contact
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Communication_Preference
+		dataType: string
+		lineageTag: d845c685-71cf-4792-8ddb-f931e6b91965
+		summarizeBy: none
+		sourceColumn: CF_Communication_Preference
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Goes_by__name_
+		dataType: string
+		lineageTag: 8d73d387-66f9-4818-809c-3ec16cb808c7
+		summarizeBy: none
+		sourceColumn: CF_Goes_by__name_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_First_Party_Coverage__UM_UIM__
+		dataType: string
+		lineageTag: 85238201-63d2-47bb-8b8b-ce2f991cae04
+		summarizeBy: none
+		sourceColumn: CF_First_Party_Coverage__UM_UIM__
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Investigating_Agency
+		dataType: string
+		lineageTag: 8a3bd521-35b9-4375-b971-537620885854
+		summarizeBy: none
+		sourceColumn: CF_Investigating_Agency
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_SOL__1st_Party_
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e679ad02-7b58-4815-a85b-d36784a3fea4
+		summarizeBy: none
+		sourceColumn: CF_SOL__1st_Party_
+
+		variation Variation
+			isDefault
+			relationship: bf6136c9-7de2-4afb-97eb-c69639463127
+			defaultHierarchy: LocalDateTable_971dfcdc-a535-467c-94e2-c8cad254f4a0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_SOL__3rd_Party_
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: af87f219-916c-4e6e-acd7-2a01b724277b
+		summarizeBy: none
+		sourceColumn: CF_SOL__3rd_Party_
+
+		variation Variation
+			isDefault
+			relationship: ce5e74c9-6dab-4249-9f45-2d4a01045d24
+			defaultHierarchy: LocalDateTable_017303e7-5bb2-4666-9d3e-e4f0dbc2da22.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_SOL__NOC_
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 29b28c55-f198-4be1-a4a0-c83edbd58eb2
+		summarizeBy: none
+		sourceColumn: CF_SOL__NOC_
+
+		variation Variation
+			isDefault
+			relationship: e7b62384-381d-4d02-8a49-54fe09cce93b
+			defaultHierarchy: LocalDateTable_7750117f-b6e7-43ff-a822-6fcbd61788f6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Marital_Status
+		dataType: string
+		lineageTag: 98d4da99-9931-4913-9667-82be22bd0aff
+		summarizeBy: none
+		sourceColumn: CF_Marital_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Current_Estimated_Value
+		dataType: double
+		lineageTag: e4855c45-0301-410f-8ce2-2d4ea552f1c3
+		summarizeBy: sum
+		sourceColumn: CF_Current_Estimated_Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_DOB
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 34a37716-0853-4f12-bd45-27a0379b3837
+		summarizeBy: none
+		sourceColumn: CF_DOB
+
+		variation Variation
+			isDefault
+			relationship: e248e0d8-d7f2-4568-a3d4-7ef7abfd119d
+			defaultHierarchy: LocalDateTable_9f613006-1073-480c-ad03-e1cd7273bf9a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Last_4_SSN
+		dataType: string
+		lineageTag: d0c53fda-4d59-4864-8776-24f07aed2d55
+		summarizeBy: none
+		sourceColumn: CF_Last_4_SSN
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Red_Flag
+		dataType: string
+		lineageTag: 56b92751-4a4f-41d6-b212-09a86ff8c85d
+		summarizeBy: none
+		sourceColumn: CF_Red_Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Hire_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c9530cc9-ad8d-4a28-abd0-1e1a57d7b543
+		summarizeBy: none
+		sourceColumn: CF_Hire_Date
+
+		variation Variation
+			isDefault
+			relationship: fd3c3fe9-0613-4575-a84d-29d43118267a
+			defaultHierarchy: LocalDateTable_b2297845-0c0c-4874-bfc2-8e08527c4721.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Case_Disposition_
+		dataType: string
+		lineageTag: 29c415f4-f8b1-4e54-b4c2-80d7d719dadd
+		summarizeBy: none
+		sourceColumn: CF_Case_Disposition_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Disposition_Details
+		dataType: string
+		lineageTag: ca0ec9bc-67ff-46dd-b86d-8515782774bf
+		summarizeBy: none
+		sourceColumn: CF_Disposition_Details
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Client_Done_Treating
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 00414c0b-5f1d-4e60-bd11-76e88e4111ea
+		summarizeBy: none
+		sourceColumn: CF_Client_Done_Treating
+
+		variation Variation
+			isDefault
+			relationship: 94b6508b-57cd-466e-ba57-14f643fafa2d
+			defaultHierarchy: LocalDateTable_4d26abc9-9fd7-4e15-aeba-4cdd3262cf0c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Demand_Ready
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b415451a-5eb1-4ba2-8af9-2f1eba1f4178
+		summarizeBy: none
+		sourceColumn: CF_Demand_Ready
+
+		variation Variation
+			isDefault
+			relationship: 2558fa69-8ea5-4ae3-a393-172fc78f2ba1
+			defaultHierarchy: LocalDateTable_4f1dd265-b00f-4cfe-9f19-5b356c001709.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Answer_Filed
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6c73533c-11b2-4d80-81ef-2f61b7968b8a
+		summarizeBy: none
+		sourceColumn: CF_Answer_Filed
+
+		variation Variation
+			isDefault
+			relationship: 4952fff2-b465-4957-a4de-36ce8a23998e
+			defaultHierarchy: LocalDateTable_3c430ef8-fcf9-496a-ba1f-4501de014a82.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_FIRM_SOL_CALENDARED
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c0f8d13d-ad51-48f2-8aaa-a51ae7b1b8f0
+		summarizeBy: none
+		sourceColumn: CF_FIRM_SOL_CALENDARED
+
+		variation Variation
+			isDefault
+			relationship: b6a3d769-c407-47e2-8508-4ab28d8d7fb5
+			defaultHierarchy: LocalDateTable_ef036afa-ca72-4ce7-847a-6ba2cddedbf1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_SOFT_SOL_CALENDARED
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 03e527e7-d21d-4d3a-8b4d-676612f4e939
+		summarizeBy: none
+		sourceColumn: CF_SOFT_SOL_CALENDARED
+
+		variation Variation
+			isDefault
+			relationship: 6698dc1e-7917-444b-87de-a4d47fe986f9
+			defaultHierarchy: LocalDateTable_87030421-4188-4347-8e89-cf1bbc37084d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Case_Number
+		dataType: string
+		lineageTag: fbd42217-2197-470f-931e-5d1ae588caf7
+		summarizeBy: none
+		sourceColumn: CF_Case_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Representation_Complete
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5eb6c4c7-9982-447f-bb84-026cd5038713
+		summarizeBy: none
+		sourceColumn: CF_Representation_Complete
+
+		variation Variation
+			isDefault
+			relationship: 848f737b-f87a-4c2e-8aa4-c397393918db
+			defaultHierarchy: LocalDateTable_9a4303f7-44d0-4189-b66a-7ecb1963d28d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Prosecutor_Assigned
+		dataType: string
+		lineageTag: cb623d92-7363-4911-851e-63d9318bec2d
+		summarizeBy: none
+		sourceColumn: CF_Prosecutor_Assigned
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Prosecutor_Assistant
+		dataType: string
+		lineageTag: 4b5a0b3a-ae78-426c-83cb-adaca27b2d15
+		summarizeBy: none
+		sourceColumn: CF_Prosecutor_Assistant
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Judge_Assigned
+		dataType: string
+		lineageTag: a5020544-2ea8-46a1-bf3d-4da5524815ca
+		summarizeBy: none
+		sourceColumn: CF_Judge_Assigned
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Judicial_Assistant
+		dataType: string
+		lineageTag: e609025a-dfa6-4fd7-88d3-0bf901dd7855
+		summarizeBy: none
+		sourceColumn: CF_Judicial_Assistant
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Public_Defender_Assigned
+		dataType: string
+		lineageTag: 7c8d6d88-6a66-4191-87c5-2336332bc9b3
+		summarizeBy: none
+		sourceColumn: CF_Public_Defender_Assigned
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_ADOT___Admin_Per_Se
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 34c43523-08dc-4056-823f-7430e1d9abbb
+		summarizeBy: none
+		sourceColumn: CF_ADOT___Admin_Per_Se
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_ADOT__Telephonic_Callback_Number
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fdf49c7b-5d9d-40e6-803c-c8efac3c2234
+		summarizeBy: none
+		sourceColumn: CF_ADOT__Telephonic_Callback_Number
+
+		variation Variation
+			isDefault
+			relationship: ee921fd5-726f-4d6a-acdb-8a6af36c696c
+			defaultHierarchy: LocalDateTable_27e1d8c5-8c2b-4d95-9d59-84189927b09a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_ADOT___Request_for_Hearing_Sent
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4877e860-3d64-4ca6-9968-fcb686fccd62
+		summarizeBy: none
+		sourceColumn: CF_ADOT___Request_for_Hearing_Sent
+
+		variation Variation
+			isDefault
+			relationship: 54f9bf35-c806-4036-8b19-2a40a2fa4129
+			defaultHierarchy: LocalDateTable_04e36e55-6700-47db-836b-bf1ac38c55cb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_ADOT___LE_or_DR_Case_No_
+		dataType: string
+		lineageTag: 5f01f980-64fe-4527-94bc-a517002a9ad3
+		summarizeBy: none
+		sourceColumn: CF_ADOT___LE_or_DR_Case_No_
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Driver_License___Number
+		dataType: string
+		lineageTag: f43a419c-68f8-4337-a442-21e1caedef4a
+		summarizeBy: none
+		sourceColumn: CF_Driver_License___Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Driver_License___Issuing_State
+		dataType: string
+		lineageTag: a888864c-e19a-45d9-b94f-59229f0d3405
+		summarizeBy: none
+		sourceColumn: CF_Driver_License___Issuing_State
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Driver_License___Class
+		dataType: string
+		lineageTag: ac6bb2ff-a1e2-4cd7-bf9b-a355bf73f274
+		summarizeBy: none
+		sourceColumn: CF_Driver_License___Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Report_Number
+		dataType: string
+		lineageTag: d83e799a-7d53-4132-883b-7ace7c6d79f9
+		summarizeBy: none
+		sourceColumn: CF_Report_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Salutation
+		dataType: string
+		lineageTag: 4b14aada-1d52-4ea4-bab5-fd3ecd93e7a3
+		summarizeBy: none
+		sourceColumn: CF_Salutation
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Phase_2_Completed
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5e49ee90-a731-43c3-b83d-3913e3b25c4f
+		summarizeBy: none
+		sourceColumn: CF_Phase_2_Completed
+
+		variation Variation
+			isDefault
+			relationship: d4d0edef-202f-443a-b1b5-3827775da4ba
+			defaultHierarchy: LocalDateTable_8cf7f548-1c9b-45db-a4cb-5c01ca445dd6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Client_Treatment_Completed
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d26e56ff-486a-4372-a0b7-4b30782584b3
+		summarizeBy: none
+		sourceColumn: CF_Client_Treatment_Completed
+
+		variation Variation
+			isDefault
+			relationship: 4d57bcbe-72dc-4616-bf30-2efa3a911269
+			defaultHierarchy: LocalDateTable_91289840-b5bc-425c-bfb5-5ae6b1ee5154.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Demand_Audit_Missing_Records
+		dataType: string
+		lineageTag: efde79c9-82ce-4667-a188-b5c172dd570a
+		summarizeBy: none
+		sourceColumn: CF_Demand_Audit_Missing_Records
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_Offer_Accepted_Phase_5a_Complete
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3472aef6-a41f-421b-918e-b09292971e2d
+		summarizeBy: none
+		sourceColumn: CF_Offer_Accepted_Phase_5a_Complete
+
+		variation Variation
+			isDefault
+			relationship: 5498e52c-1289-458e-a2d9-8057562fe7b4
+			defaultHierarchy: LocalDateTable_cdf4d522-053b-4ac2-a59b-6a8e707cfde1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CF_Assigned_to_Pre_Trial_Service
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 67e58b9d-d42e-4082-a963-06f3fa07a1f0
+		summarizeBy: none
+		sourceColumn: CF_Assigned_to_Pre_Trial_Service
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_ADOT___Withdraw_No__
+		dataType: string
+		lineageTag: ccda49c6-ce6c-432c-9995-7fc6c964baf8
+		summarizeBy: none
+		sourceColumn: CF_ADOT___Withdraw_No__
+
+		annotation SummarizationSetBy = Automatic
+
+	column MatchID =
+
+			IF(
+			    ISBLANK('Clio-DenormalizedMatters'[ClientReference]) || 'Clio-DenormalizedMatters'[ClientReference] = "",
+			    "NO_MATCH_" & FORMAT('Clio-DenormalizedMatters'[Id], "0"),
+			    'Clio-DenormalizedMatters'[ClientReference]
+			)
+		lineageTag: 7bb65dd0-cfe2-4f1d-9544-ba369e4cd3e0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Clio-DenormalizedMatters = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    clio_manage_Schema = #"caramel-compass-452313-u3_Database"{[Name="clio_manage",Kind="Schema"]}[Data],
+				    DenormalizedMatters_View = clio_manage_Schema{[Name="DenormalizedMatters",Kind="View"]}[Data]
+				in
+				    DenormalizedMatters_View
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

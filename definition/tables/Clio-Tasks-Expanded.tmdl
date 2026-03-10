@@ -1,0 +1,360 @@
+table Clio-Tasks-Expanded
+	lineageTag: c634d124-de90-4e2f-8765-22da85db2b4a
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c48d51f-6fea-4a7e-a05a-9430c45eabb5
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etag
+		dataType: string
+		lineageTag: ac203316-5d9a-4281-8af9-e517f41751e8
+		summarizeBy: none
+		sourceColumn: Etag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 69a8fbb7-2b52-4896-a167-e68342b49d49
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 8f43c09a-5f55-40a1-85de-2e2da04ebb92
+			defaultHierarchy: LocalDateTable_a467071b-9966-4567-b773-20494808106a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fcd29c8c-2c27-46fb-9ae0-449c04951b52
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: bcb55277-695d-4abb-bb59-b4bb44d6d098
+			defaultHierarchy: LocalDateTable_33c4abcc-f1af-4ff6-b7d0-ad2b86463a8e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 793784bc-aca1-4b60-b4a5-c9879fdf7445
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 0821c48d-d9f8-4c02-a362-69d9b445f226
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 1a7eee8d-b876-4654-85f1-686d22bd632f
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column DescriptionTextType
+		dataType: string
+		lineageTag: ea34c20b-4646-4563-9147-5f9284be3aa9
+		summarizeBy: none
+		sourceColumn: DescriptionTextType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Priority
+		dataType: string
+		lineageTag: b10d54cc-2eb8-41ec-b698-307215546269
+		summarizeBy: none
+		sourceColumn: Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 14a39747-8191-495f-8080-bf75de2cf6df
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: 05cc4644-601d-46f6-a4a4-c1c5a17e8ad7
+			defaultHierarchy: LocalDateTable_c28b0b65-2ac4-4d5a-9fb7-75c62d516a8f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Permission
+		dataType: string
+		lineageTag: ec7965b8-19d7-40bb-aff1-fa19edc4cf3f
+		summarizeBy: none
+		sourceColumn: Permission
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompletedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 31ec319c-92c7-49df-8451-e73373a4819c
+		summarizeBy: none
+		sourceColumn: CompletedDate
+
+		variation Variation
+			isDefault
+			relationship: 1056530f-7926-4938-9112-0a95b20d5c02
+			defaultHierarchy: LocalDateTable_4b40d9b1-92fe-4112-b205-3ac81105a572.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column NotifyCompletion
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1d55c5ab-4dbc-4f54-9355-372212c5ab16
+		summarizeBy: none
+		sourceColumn: NotifyCompletion
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatuteOfLimitations
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d3d76654-a735-448a-9bf3-78d85920e624
+		summarizeBy: none
+		sourceColumn: StatuteOfLimitations
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEstimated
+		dataType: int64
+		formatString: 0
+		lineageTag: f3d44ad6-2204-404d-aee7-a9f57e516e0a
+		summarizeBy: sum
+		sourceColumn: TimeEstimated
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntriesCount
+		dataType: int64
+		formatString: 0
+		lineageTag: ccf021c3-819e-4025-a15a-b269487af8fc
+		summarizeBy: sum
+		sourceColumn: TimeEntriesCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssigneeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 12d373e7-9847-41b4-b61a-b8c3fa1f0d4c
+		summarizeBy: count
+		sourceColumn: AssigneeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssigneeType
+		dataType: string
+		lineageTag: ca0c09d2-c22e-433e-98d3-e81435b3f7d1
+		summarizeBy: none
+		sourceColumn: AssigneeType
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssignerId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3738f046-0c9c-4727-b1ac-064b62a55f93
+		summarizeBy: count
+		sourceColumn: AssignerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MatterId
+		dataType: int64
+		formatString: 0
+		lineageTag: abad3da3-e8c0-4c9d-baa7-5f384bdfc525
+		summarizeBy: count
+		sourceColumn: MatterId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaskTypeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4da8c9d8-1987-4420-ae49-2f54d74a3ecc
+		summarizeBy: count
+		sourceColumn: TaskTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaskTypeName
+		dataType: string
+		lineageTag: 1c71ee2f-d8e0-4f2a-b8a9-be62aeb25c6a
+		summarizeBy: none
+		sourceColumn: TaskTypeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_days_relative_to_due_date
+		dataType: int64
+		formatString: 0
+		lineageTag: 14de5f8f-4bca-47eb-b05a-051e69c1640a
+		summarizeBy: sum
+		sourceColumn: custom_days_relative_to_due_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_due_status
+		dataType: string
+		lineageTag: cf7edd97-f810-4272-a426-fa99f700874e
+		summarizeBy: none
+		sourceColumn: custom_due_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_age_days
+		dataType: int64
+		formatString: 0
+		lineageTag: 79582316-b428-4e19-b30c-e07dd8c74686
+		summarizeBy: sum
+		sourceColumn: custom_age_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column matter_url
+		dataType: string
+		lineageTag: 778c4482-8704-46ef-82ec-8d855d3c854d
+		summarizeBy: none
+		sourceColumn: matter_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column assignee_name
+		dataType: string
+		lineageTag: 9eda9edf-6ced-4322-855d-d951945ee79f
+		summarizeBy: none
+		sourceColumn: assignee_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column assignee_first_name
+		dataType: string
+		lineageTag: 9375064f-e1b5-47ed-be75-59d9a1a94b87
+		summarizeBy: none
+		sourceColumn: assignee_first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column assignee_last_name
+		dataType: string
+		lineageTag: fafa63af-5b3e-4446-9a29-75781849d9e7
+		summarizeBy: none
+		sourceColumn: assignee_last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column assignee_email
+		dataType: string
+		lineageTag: 0d0fc4de-4b92-4088-947c-8d58c2f29eff
+		summarizeBy: none
+		sourceColumn: assignee_email
+
+		annotation SummarizationSetBy = Automatic
+
+	column assignee_enabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a16e73d2-23fc-4339-a1f0-97c185ff59e3
+		summarizeBy: none
+		sourceColumn: assignee_enabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column assigner_name
+		dataType: string
+		lineageTag: 3edd7548-d2ce-4a96-8ab3-c701d893330b
+		summarizeBy: none
+		sourceColumn: assigner_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column assigner_first_name
+		dataType: string
+		lineageTag: 9830cb9c-3908-4b4d-bfb4-9cf7ad290678
+		summarizeBy: none
+		sourceColumn: assigner_first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column assigner_last_name
+		dataType: string
+		lineageTag: efad744f-c63e-4638-8aec-d1329a88bc06
+		summarizeBy: none
+		sourceColumn: assigner_last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column assigner_email
+		dataType: string
+		lineageTag: c9b7fad4-39e3-404b-a4db-8d2bcc387094
+		summarizeBy: none
+		sourceColumn: assigner_email
+
+		annotation SummarizationSetBy = Automatic
+
+	column assigner_enabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c30d0c99-6421-4572-966a-55e39f2ed610
+		summarizeBy: none
+		sourceColumn: assigner_enabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_reference_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: adbfdaea-859e-4249-a489-283f27d4108c
+		summarizeBy: none
+		sourceColumn: custom_reference_date
+
+		variation Variation
+			isDefault
+			relationship: b34c56d3-9ebb-4ec9-a144-9dfc24c93a00
+			defaultHierarchy: LocalDateTable_ecbf5653-fa2c-4289-8a68-cf5966c78d02.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Clio-Tasks-Expanded = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    clio_manage_Schema = #"caramel-compass-452313-u3_Database"{[Name="clio_manage",Kind="Schema"]}[Data],
+				    #"Tasks-Expanded_View" = clio_manage_Schema{[Name="Tasks-Expanded",Kind="View"]}[Data]
+				in
+				    #"Tasks-Expanded_View"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Exception

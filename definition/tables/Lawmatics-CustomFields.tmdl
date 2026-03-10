@@ -1,0 +1,71 @@
+table Lawmatics-CustomFields
+	lineageTag: b44a3bb9-cf7e-4291-862a-e0d5852f5094
+
+	column id
+		dataType: string
+		lineageTag: 09f9b3cf-66db-4cf9-8b6f-ac7e6a07dd58
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: 6836450d-0d83-4530-84f0-3d7f47ad0839
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 23aaae97-5374-497d-b35c-8c10d87df0ef
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_type
+		dataType: string
+		lineageTag: 03ade0e4-dcc5-467a-af03-16ea52056d73
+		summarizeBy: none
+		sourceColumn: field_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column entity_type
+		dataType: string
+		lineageTag: 24f82f48-1460-43fc-aad7-a1122556f50f
+		summarizeBy: none
+		sourceColumn: entity_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column _skyvia_sync
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f59f32b2-d692-45f2-82e9-5cc88093a4b9
+		summarizeBy: none
+		sourceColumn: _skyvia_sync
+
+		variation Variation
+			isDefault
+			relationship: 9f002556-e54c-455d-85a0-11d137d7d448
+			defaultHierarchy: LocalDateTable_e5c85dec-4144-4e98-bd60-73b3d9b088ec.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Lawmatics-CustomFields = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    lawmatics_Schema = #"caramel-compass-452313-u3_Database"{[Name="lawmatics",Kind="Schema"]}[Data],
+				    CustomFields_Table = lawmatics_Schema{[Name="CustomFields",Kind="Table"]}[Data]
+				in
+				    CustomFields_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

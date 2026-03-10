@@ -1,0 +1,457 @@
+table Clio-Bills
+	lineageTag: cdfe7c1b-c811-4556-9e10-f5c024dd6d6d
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 44734b93-3967-43a1-9354-16e24c864e63
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etag
+		dataType: string
+		lineageTag: f29056de-5393-4bd4-9799-e0eecb3ef3e9
+		summarizeBy: none
+		sourceColumn: Etag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number
+		dataType: string
+		lineageTag: 105fbdee-01e6-4f94-ad3b-75730d01e7b0
+		summarizeBy: none
+		sourceColumn: Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssuedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 77434d27-6f8a-4be2-b7bd-d6672dcef2ee
+		summarizeBy: none
+		sourceColumn: IssuedDate
+
+		variation Variation
+			isDefault
+			relationship: 93fcac2a-2cea-49bf-aa7f-3b4049a7d0a4
+			defaultHierarchy: LocalDateTable_c5ed9d72-393c-4eae-9de7-a180a099bf22.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d5d19d62-1196-492e-94dc-4343e21d23d9
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 00c29c46-ad5d-4741-bdf8-ac276811c681
+			defaultHierarchy: LocalDateTable_4ddde534-0154-4c5d-9ea7-770a36dc3d7b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 52d91118-9823-4392-9734-7dfe0c64f8ed
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: 978daae9-b975-430f-8f00-4a52b531234c
+			defaultHierarchy: LocalDateTable_0fcf6927-02d4-44d1-a773-ed8a2f17fca4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TaxRate
+		dataType: double
+		lineageTag: b257b8dc-7ba6-4b0f-8fae-8010e19ee08c
+		summarizeBy: sum
+		sourceColumn: TaxRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SecondaryTaxRate
+		dataType: double
+		lineageTag: 0977bcfb-b7b2-43b1-bb27-015cf691a162
+		summarizeBy: sum
+		sourceColumn: SecondaryTaxRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f84b1238-7114-4fe0-bec7-f1523ac31a82
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: c85a3235-bc21-435e-88f3-eb82747e4c6e
+			defaultHierarchy: LocalDateTable_9657888b-c5f4-4ead-b4c5-2627e10508e7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subject
+		dataType: string
+		lineageTag: 441a88a8-316f-4afa-8f61-24e492e5d567
+		summarizeBy: none
+		sourceColumn: Subject
+
+		annotation SummarizationSetBy = Automatic
+
+	column PurchaseOrder
+		dataType: string
+		lineageTag: 698073f0-f46b-4f34-80c5-5793b147b2a4
+		summarizeBy: none
+		sourceColumn: PurchaseOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: c59b343b-48c0-481d-9d05-6f5006fc96b1
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Memo
+		dataType: string
+		lineageTag: 08e2b077-4693-4ba6-afb1-452cc4dbabdb
+		summarizeBy: none
+		sourceColumn: Memo
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9f70dd5a-a341-4ce1-a9aa-b5d77911a533
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: 32da86ec-4a6d-489c-a231-19bd576ae4f4
+			defaultHierarchy: LocalDateTable_4a94f609-40c1-45e1-a370-f9b26b7b622e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7256ee6d-edc9-40c1-974f-d8799f586c33
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: 4f46bedb-08ec-4e06-b772-3da356acb212
+			defaultHierarchy: LocalDateTable_c82f550a-e9bf-42de-b50d-784ed72c6966.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Balance
+		dataType: double
+		lineageTag: 34423556-0c9a-4cea-b06c-847745f75e53
+		summarizeBy: sum
+		sourceColumn: Balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column State
+		dataType: string
+		lineageTag: 13cfd5d3-d450-4200-a97d-34a330a835d9
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kind
+		dataType: string
+		lineageTag: 5acd8f85-816d-4b9e-bc47-02be2292efd7
+		summarizeBy: none
+		sourceColumn: Kind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total
+		dataType: double
+		lineageTag: 4b2237b1-620b-481c-a5b6-2cfc965e9ff9
+		summarizeBy: sum
+		sourceColumn: Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Paid
+		dataType: double
+		lineageTag: c3b33f9e-f53b-459a-95ab-46c8aa9d4033
+		summarizeBy: sum
+		sourceColumn: Paid
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PaidDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1096c052-d12b-4622-988f-f216fcce8db7
+		summarizeBy: none
+		sourceColumn: PaidDate
+
+		variation Variation
+			isDefault
+			relationship: 1bd2779d-1e6a-47c3-b54a-8f8c936405b3
+			defaultHierarchy: LocalDateTable_5d890986-aa8a-466f-95aa-0cdd5c6088c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pending
+		dataType: double
+		lineageTag: 1bc25dd1-50a7-434c-a75d-2489f1078410
+		summarizeBy: sum
+		sourceColumn: Pending
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Due
+		dataType: double
+		lineageTag: b78a7ad3-cc72-4613-83b6-2b9002768726
+		summarizeBy: sum
+		sourceColumn: Due
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountServicesOnly
+		dataType: string
+		lineageTag: 02bec535-742f-4ad1-ae27-a0557f19b901
+		summarizeBy: none
+		sourceColumn: DiscountServicesOnly
+
+		annotation SummarizationSetBy = Automatic
+
+	column CanUpdate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1a546beb-6417-4e71-95b9-31a118d3689d
+		summarizeBy: none
+		sourceColumn: CanUpdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditsIssued
+		dataType: double
+		lineageTag: 77114f4b-8b0c-4d63-8424-0a89715af5a4
+		summarizeBy: sum
+		sourceColumn: CreditsIssued
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Shared
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 10070a14-1bd0-42ee-acf4-52ac2cc171fe
+		summarizeBy: none
+		sourceColumn: Shared
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastSentDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9b7f976b-3e79-457f-98fd-10a456d7a9bb
+		summarizeBy: none
+		sourceColumn: LastSentDate
+
+		variation Variation
+			isDefault
+			relationship: bd47b1f6-2664-45d9-bdc8-b3e6df940b3e
+			defaultHierarchy: LocalDateTable_3143d2b6-8052-41fc-9de5-ac1ad0c05886.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServicesSecondaryTax
+		dataType: double
+		lineageTag: 955d405a-8e91-4760-a8d1-643825e84321
+		summarizeBy: sum
+		sourceColumn: ServicesSecondaryTax
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ServicesSubTotal
+		dataType: double
+		lineageTag: 6521f65a-6d79-4851-b425-71fe1d087cdf
+		summarizeBy: sum
+		sourceColumn: ServicesSubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ServicesTax
+		dataType: double
+		lineageTag: 5c2a7066-80c2-4c50-8de9-515f9b154cc0
+		summarizeBy: sum
+		sourceColumn: ServicesTax
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ServicesTaxableSubTotal
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ee5df9a-50b0-4ac4-b57c-32bf315c2d37
+		summarizeBy: sum
+		sourceColumn: ServicesTaxableSubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServicesSecondaryTaxableSubTotal
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a497a8d-1f9a-4508-946f-784863f399af
+		summarizeBy: sum
+		sourceColumn: ServicesSecondaryTaxableSubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaxableSubTotal
+		dataType: int64
+		formatString: 0
+		lineageTag: a2486bf3-96c5-4fa9-bf74-b49144c0b62c
+		summarizeBy: sum
+		sourceColumn: TaxableSubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+	column SecondaryTaxableSubTotal
+		dataType: int64
+		formatString: 0
+		lineageTag: 21bbca8d-cf1f-4c68-a658-3614081da10a
+		summarizeBy: sum
+		sourceColumn: SecondaryTaxableSubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubTotal
+		dataType: double
+		lineageTag: 3418792c-8b60-4331-ae26-fd48d654c827
+		summarizeBy: sum
+		sourceColumn: SubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxSum
+		dataType: double
+		lineageTag: 12fd9897-f89e-4c15-a6fd-b09015cfe224
+		summarizeBy: sum
+		sourceColumn: TaxSum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SecondaryTaxSum
+		dataType: double
+		lineageTag: ff041a1b-3531-47e1-b15b-127d25fbff2b
+		summarizeBy: sum
+		sourceColumn: SecondaryTaxSum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalTax
+		dataType: double
+		lineageTag: 21b71c67-d9ec-4c08-9202-1c98b85d271d
+		summarizeBy: sum
+		sourceColumn: TotalTax
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ClientId
+		dataType: int64
+		formatString: 0
+		lineageTag: 965221a8-0652-4c1c-ae7d-8027c59d0221
+		summarizeBy: count
+		sourceColumn: ClientId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientName
+		dataType: string
+		lineageTag: fcff2989-da5b-48df-aefe-4d6a3181e2c4
+		summarizeBy: none
+		sourceColumn: ClientName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MatterId
+		dataType: int64
+		formatString: 0
+		lineageTag: b37cf530-578a-460e-802f-c583146979d4
+		summarizeBy: count
+		sourceColumn: MatterId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OverdueOnly
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2ba91c00-0595-4f13-b08c-52ffd3e98fb7
+		summarizeBy: none
+		sourceColumn: OverdueOnly
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Clio-Bills = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    clio_manage_Schema = #"caramel-compass-452313-u3_Database"{[Name="clio_manage",Kind="Schema"]}[Data],
+				    Bills_Table = clio_manage_Schema{[Name="Bills",Kind="Table"]}[Data]
+				in
+				    Bills_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

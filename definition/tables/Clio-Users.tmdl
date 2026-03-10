@@ -1,0 +1,206 @@
+table Clio-Users
+	lineageTag: e209ff85-27eb-49ac-b6a1-acf3c8d9022c
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: d4c06ec7-8959-4412-b104-bad6e5782634
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etag
+		dataType: string
+		lineageTag: bf3c8d82-18b7-4740-8343-549bbdc02497
+		summarizeBy: none
+		sourceColumn: Etag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bd66854d-c00f-4606-ad1e-fcae682fbd59
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: ea7ee5a4-6d99-4615-baff-833414725317
+			defaultHierarchy: LocalDateTable_e303352f-27cc-4282-b3d8-66cdb605f707.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4cecd3ee-6525-4a5f-9631-6396569f1a67
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 6342a9f6-4327-4274-b284-6a3fe63ee3ba
+			defaultHierarchy: LocalDateTable_21c0f1c3-7fae-47c1-8c5f-dc29652c081a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_owner
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d8b9340b-8a4c-41c1-a3c0-aeac9a6d9bbf
+		summarizeBy: none
+		sourceColumn: account_owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column clio_connect
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 47d81cc9-0ff3-46fc-920a-a8312fa97518
+		summarizeBy: none
+		sourceColumn: clio_connect
+
+		annotation SummarizationSetBy = Automatic
+
+	column court_rules_default_attendee
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 796cb47e-3ffb-4d0b-83bd-699103c821db
+		summarizeBy: none
+		sourceColumn: court_rules_default_attendee
+
+		annotation SummarizationSetBy = Automatic
+
+	column default_calendar_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 60c05a94-fbdf-4dab-971a-7fe0cec3cbfc
+		summarizeBy: sum
+		sourceColumn: default_calendar_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: ca9e2700-f8f4-4809-8d43-b3008e11c4e0
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column enabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: def7848b-a5f0-4e30-a3b4-63748cd30cbf
+		summarizeBy: none
+		sourceColumn: enabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: ae7e0067-318b-4589-886c-c50e2e368265
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column initials
+		dataType: string
+		lineageTag: 62ca805c-05e6-4d67-a254-b4c7a8c337f2
+		summarizeBy: none
+		sourceColumn: initials
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: e1638c18-1985-4de5-8ff4-64d627493c67
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 3b835960-ff27-4fd6-b484-052096953883
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column phone_number
+		dataType: string
+		lineageTag: 4deb197b-adae-4b5b-8cd1-50539d37ec6a
+		summarizeBy: none
+		sourceColumn: phone_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column rate
+		dataType: double
+		lineageTag: 94dd5507-baaa-4052-b831-afa052027770
+		summarizeBy: sum
+		sourceColumn: rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column roles
+		dataType: string
+		lineageTag: 868126e3-ec38-4e89-81fe-e16195ecb01d
+		summarizeBy: none
+		sourceColumn: roles
+
+		annotation SummarizationSetBy = Automatic
+
+	column subscription_type
+		dataType: string
+		lineageTag: 9c4f918e-4547-41f5-9bd0-979788a0cd87
+		summarizeBy: none
+		sourceColumn: subscription_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_zone
+		dataType: string
+		lineageTag: e67c2372-6a71-4718-a568-4316856b987d
+		summarizeBy: none
+		sourceColumn: time_zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column contact
+		dataType: int64
+		formatString: 0
+		lineageTag: c2de5e54-8ef1-47d2-be43-b892cf6cbfa3
+		summarizeBy: sum
+		sourceColumn: contact
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_title
+		dataType: string
+		lineageTag: 10c739fe-cfc0-4843-a8ec-693f8be5ba44
+		summarizeBy: none
+		sourceColumn: job_title
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Clio-Users = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    clio_manage_Schema = #"caramel-compass-452313-u3_Database"{[Name="clio_manage",Kind="Schema"]}[Data],
+				    Users_Table = clio_manage_Schema{[Name="Users",Kind="Table"]}[Data]
+				in
+				    Users_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

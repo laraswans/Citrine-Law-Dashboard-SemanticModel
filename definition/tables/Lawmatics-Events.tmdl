@@ -1,0 +1,166 @@
+table Lawmatics-Events
+	lineageTag: e9a2a0a8-1d36-41b2-9bc2-5dd393000124
+
+	column id
+		dataType: string
+		lineageTag: 0a5e50bb-018e-4b92-885f-384106072fcf
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: d348fcc7-6a17-4e00-9d24-72bb74a90da8
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: b9fd29d6-c345-48c7-8236-f884ddf106c2
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: a9829acb-d7a5-44ca-8058-a19904b3ffee
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_zone
+		dataType: string
+		lineageTag: 9694b47f-105a-45e2-a1cd-327c0e700da9
+		summarizeBy: none
+		sourceColumn: time_zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cb36d040-b17c-4916-862f-1f6dce3cf37b
+		summarizeBy: none
+		sourceColumn: start_date
+
+		variation Variation
+			isDefault
+			relationship: 7b036d21-133f-4157-b31a-62f3610b805c
+			defaultHierarchy: LocalDateTable_99934cce-47d6-4e3a-bb27-9944e6d99638.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6b709c43-6363-4726-af69-f4dc5f652763
+		summarizeBy: none
+		sourceColumn: end_date
+
+		variation Variation
+			isDefault
+			relationship: e80b70d0-4640-4a7f-8ad0-03287618d382
+			defaultHierarchy: LocalDateTable_31d276f7-8e33-47e4-914a-f39692fc7b17.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column all_day
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 44d50b30-0a8d-41c0-94e9-28e769a65c59
+		summarizeBy: none
+		sourceColumn: all_day
+
+		annotation SummarizationSetBy = Automatic
+
+	column canceled_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c0a507d3-e80e-453c-90d5-489b86184a90
+		summarizeBy: none
+		sourceColumn: canceled_at
+
+		variation Variation
+			isDefault
+			relationship: 1aa64208-0623-4261-a860-94950c06b081
+			defaultHierarchy: LocalDateTable_94b76a0e-1cb4-4ee6-ba77-388652f7e122.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 77f2cd43-3b3e-4e14-86fd-a3051953ec07
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: 9b2e1161-aafa-4ef2-b0af-8ca76f294f73
+			defaultHierarchy: LocalDateTable_df127738-7fe6-48dc-87fe-a71fee7b55bd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 04830dc3-0169-476f-a4e8-6039e4f8e4f4
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		variation Variation
+			isDefault
+			relationship: 024fd23a-b499-482e-81d0-c84f231f9ca6
+			defaultHierarchy: LocalDateTable_d876d506-3bf6-4de5-bf7a-96e8525c5956.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_type_id
+		dataType: string
+		lineageTag: 7653cc1e-b9ac-43b0-a3ec-694b39834d7b
+		summarizeBy: none
+		sourceColumn: event_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column prospect_id
+		dataType: string
+		lineageTag: 930586df-7a62-468d-a423-ed52665d8e63
+		summarizeBy: none
+		sourceColumn: prospect_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column _skyvia_sync
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b173b6a2-84e9-436a-b34c-7803abd3b892
+		summarizeBy: none
+		sourceColumn: _skyvia_sync
+
+		variation Variation
+			isDefault
+			relationship: b7d7fbae-0778-47ed-a3d6-e7fe3e666d90
+			defaultHierarchy: LocalDateTable_3487c997-3b95-41ea-aa44-4947b70a17db.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Lawmatics-Events = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    lawmatics_Schema = #"caramel-compass-452313-u3_Database"{[Name="lawmatics",Kind="Schema"]}[Data],
+				    Events_Table = lawmatics_Schema{[Name="Events",Kind="Table"]}[Data]
+				in
+				    Events_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

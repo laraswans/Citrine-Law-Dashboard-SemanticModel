@@ -1,0 +1,88 @@
+table 'Stage Mapping'
+	lineageTag: 7e563d3e-1996-4586-bb06-f04e20cdb2ef
+
+	measure 'Substatus Rank' = RANKX(ALLSELECTED('Stage Mapping'[StageName]), [Total Leads], , DESC, Dense)
+		formatString: 0
+		lineageTag: d74a6dfd-3f31-49a6-86ee-43b80061ee29
+
+	column StageId
+		lineageTag: 5acc0840-137c-4807-aa4d-3692c90ed224
+		isNameInferred
+		sourceColumn: [StageId]
+
+	column StageName
+		lineageTag: 0c80ad88-69cf-4495-95dd-c16eee135a7f
+		isNameInferred
+		sourceColumn: [StageName]
+
+	column MainStatus
+		lineageTag: def01e32-945d-44ba-a7b9-706891415543
+		isNameInferred
+		sourceColumn: [MainStatus]
+
+	column SortOrder
+		lineageTag: b2d34750-52f9-4911-9b2f-10662c6faf83
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+	partition 'Stage Mapping' = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "StageId", INTEGER,
+				    "StageName", STRING,
+				    "MainStatus", STRING,
+				    "SortOrder", INTEGER,
+				    {
+				        {102493, "Hired", "Hired", 1},
+				        {105556, "Client- Paid: Preindictment Consult", "Hired", 1},
+				        {107392, "Client - Paid: Jail Visit Consult", "Hired", 1},
+				        {119582, "Client - Paid: PALE/Other Consult Type", "Hired", 1},
+				        {102077, "Newly Added F/U", "Intake", 2},
+				        {102078, "Awaiting Atty/MGT Approval", "Intake", 2},
+				        {102079, "Missed Consultation F/U", "Intake", 2},
+				        {102080, "Post Consultation F/U (Automation)", "Intake", 2},
+				        {102081, "Consult Scheduled", "Intake", 2},
+				        {102082, "Awaiting Docs / Report", "Intake", 2},
+				        {102083, "Pending Fee Agreement", "Intake", 2},
+				        {102086, "Fee Agreement Sent", "Intake", 2},
+				        {103890, "Pre Indict / JV Newly Added F/U", "Intake", 2},
+				        {105521, "Post Consultation F/U (Manual)", "Intake", 2},
+				        {106843, "Preind/No Charges Filed Post Consultation F/U", "Intake", 2},
+				        {128697, "Attorney / Law Firm Communication", "Intake", 2},
+				        {150250, "Paid Consultation F/U", "Intake", 2},
+				        {130387, "PI Attorney Disqual - Bad ROI / Facts / Other", "Did Not Hire", 3},
+				        {126754, "PNC Early Exit - Pre Consult", "Did Not Hire", 3},
+				        {109390, "Unresponsive Pre-Consult", "Did Not Hire", 3},
+				        {103973, "Declined to Pay for JV/ Preind Cons", "Did Not Hire", 3},
+				        {128960, "PNC Cancelled Consult", "Did Not Hire", 3},
+				        {125538, "DNH - No Complaint/Charges Filed", "Did Not Hire", 3},
+				        {121351, "DNH - Info Gathering / Attorney Shopping", "Did Not Hire", 3},
+				        {120764, "Wrong Number - For Other Attorney Office", "Did Not Hire", 3},
+				        {120590, "DNH - No Longer Needs Assistance", "Did Not Hire", 3},
+				        {119903, "Invalid LSA Contact - SMB", "Did Not Hire", 3},
+				        {119901, "LA Lost - Customer Service", "Did Not Hire", 3},
+				        {119900, "LA Lost - No Follow Up", "Did Not Hire", 3},
+				        {119873, "REJ - Liability/Coverage Issue", "Did Not Hire", 3},
+				        {119872, "REJ - Injuries/Treatment Issue", "Did Not Hire", 3},
+				        {119850, "REJ - Difficult PNC/ Unstable", "Did Not Hire", 3},
+				        {119616, "DNH - Cont with Appointed/Current Attorney", "Did Not Hire", 3},
+				        {119615, "REJ - SOL/ Case DL / Timing Issue", "Did Not Hire", 3},
+				        {119581, "REJ - Travel Issue", "Did Not Hire", 3},
+				        {119278, "REJ - Out of State", "Did Not Hire", 3},
+				        {119277, "REJ - Not A Service We Provide", "Did Not Hire", 3},
+				        {116563, "Invalid PPC Contact", "Did Not Hire", 3},
+				        {116082, "Invalid Google Profile Contact", "Did Not Hire", 3},
+				        {116016, "Invalid FB Contact - SMB", "Did Not Hire", 3},
+				        {108643, "Wrong Number - General", "Did Not Hire", 3},
+				        {106080, "Personal Calls", "Did Not Hire", 3},
+				        {105966, "Court Personnel", "Did Not Hire", 3},
+				        {105912, "Abandoned call", "Did Not Hire", 3},
+				        {105560, "RE: Current/Former Client", "Did Not Hire", 3},
+				        {105501, "LA Lost - Wrong Information", "Did Not Hire", 3},
+				        {105500, "Marketing / Spam", "Did Not Hire", 3},
+				        {102578, "REJ - Schedule Conflict Issue", "Did Not Hire", 3},
+				        {102577, "Did not Hire- Other", "Did Not Hire", 3},
+				        {120995, "Citrine Office Vendor/Test", "Did Not Hire", 3}
+				    }
+				)

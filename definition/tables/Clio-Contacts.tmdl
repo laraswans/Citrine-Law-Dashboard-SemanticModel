@@ -1,0 +1,261 @@
+table Clio-Contacts
+	lineageTag: 8aa6c644-2d17-4f6f-b5c8-e932d0d337e0
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f9eadee-d797-4eed-aea5-f81ce8646161
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etag
+		dataType: string
+		lineageTag: 80e757d0-0c32-4f9d-9dc8-390896c59210
+		summarizeBy: none
+		sourceColumn: Etag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ffa4636e-279c-45c2-a94c-6b5f311fe6e3
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 3e870df5-3354-49da-a58c-0ffc0fa4fd1a
+			defaultHierarchy: LocalDateTable_0cc8e10f-6f91-48e2-94c3-9cc64e2943f0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 002d17e2-bd9c-4e06-bc0b-bd9887b92541
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: a42362f8-227d-468d-bb8c-c172e5b23e55
+			defaultHierarchy: LocalDateTable_28a46514-5ddd-4437-bcf5-2b34a8a5fce1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 05d7dbff-3ea8-490d-a925-725e3d160a86
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: 23bbc3da-a1d3-4b75-a5cd-711f89b785b1
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MiddleName
+		dataType: string
+		lineageTag: 06e637d3-d247-4a0f-b2e9-3e053ae76968
+		summarizeBy: none
+		sourceColumn: MiddleName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: 10b6f247-7ba3-4175-8405-8d8aa9591e8f
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateOfBirth
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1df4f8a6-3756-409b-8575-66e2342b3db7
+		summarizeBy: none
+		sourceColumn: DateOfBirth
+
+		variation Variation
+			isDefault
+			relationship: e9b051dd-7170-4a96-9f4f-7f6971ac6924
+			defaultHierarchy: LocalDateTable_4b87a14c-d2c2-4cae-b310-170250c0aac8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Type
+		dataType: string
+		lineageTag: b20480b0-89f8-4a63-9efe-3703a01ed8e0
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Prefix
+		dataType: string
+		lineageTag: 24066717-fbaa-4c10-a9e8-4ba692d889c2
+		summarizeBy: none
+		sourceColumn: Prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 8385eb18-6cee-4ff0-a75b-c140924b9b4b
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Initials
+		dataType: string
+		lineageTag: dbd7b4ef-4bce-4621-86d1-0c6b07c867d4
+		summarizeBy: none
+		sourceColumn: Initials
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClioConnectEmail
+		dataType: string
+		lineageTag: 174b0861-fa1e-48e2-9407-311947d5ae9b
+		summarizeBy: none
+		sourceColumn: ClioConnectEmail
+
+		annotation SummarizationSetBy = Automatic
+
+	column LockedClioConnectEmail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: afc6d1c3-feb0-4fe9-b452-abb2a59aa0e1
+		summarizeBy: none
+		sourceColumn: LockedClioConnectEmail
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientConnectUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: f3084916-b377-45f2-95b3-6568f03e0103
+		summarizeBy: count
+		sourceColumn: ClientConnectUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrimaryEmailAddress
+		dataType: string
+		lineageTag: 50f52285-9c3b-4920-99e8-83c60afe35f6
+		summarizeBy: none
+		sourceColumn: PrimaryEmailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column SecondaryEmailAddress
+		dataType: string
+		lineageTag: 87f5712b-e446-462c-9fa9-1e097ba71634
+		summarizeBy: none
+		sourceColumn: SecondaryEmailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrimaryPhoneNumber
+		dataType: string
+		lineageTag: f4c88db2-9ebc-4e37-ab75-4f487414a4be
+		summarizeBy: none
+		sourceColumn: PrimaryPhoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SecondaryPhoneNumber
+		dataType: string
+		lineageTag: 2f3fb813-4739-47c8-b31d-44fe4695f727
+		summarizeBy: none
+		sourceColumn: SecondaryPhoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column LedesClientId
+		dataType: string
+		lineageTag: b5958381-c4b8-48d4-8427-345b87c9c074
+		summarizeBy: none
+		sourceColumn: LedesClientId
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasClioForClientsPermission
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d4e17c3b-d1be-4931-b48d-864476969f48
+		summarizeBy: none
+		sourceColumn: HasClioForClientsPermission
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsClient
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 22af9779-7fb4-4852-9b5c-62541054986e
+		summarizeBy: none
+		sourceColumn: IsClient
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsClioForClientUser
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 01f69a0c-6f64-446f-82d1-58bb22ef993f
+		summarizeBy: none
+		sourceColumn: IsClioForClientUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCoCounsel
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5ff11d6f-7414-4f1b-8a13-a39af2b79c17
+		summarizeBy: none
+		sourceColumn: IsCoCounsel
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsBillRecipient
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2d73c832-8f02-499f-8041-771924d41769
+		summarizeBy: none
+		sourceColumn: IsBillRecipient
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTaxNumber
+		dataType: string
+		lineageTag: d7983bdb-8d97-4928-a261-ae4a83e75996
+		summarizeBy: none
+		sourceColumn: SalesTaxNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Clio-Contacts = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    clio_manage_Schema = #"caramel-compass-452313-u3_Database"{[Name="clio_manage",Kind="Schema"]}[Data],
+				    Contacts_Table = clio_manage_Schema{[Name="Contacts",Kind="Table"]}[Data]
+				in
+				    Contacts_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

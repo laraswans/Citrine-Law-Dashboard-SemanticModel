@@ -1,0 +1,134 @@
+table Lawmatics-Expenses
+	lineageTag: 52071eb0-4185-4cd2-b181-4c1ddc0603f7
+
+	column id
+		dataType: string
+		lineageTag: 3c490f23-ed8d-4ce6-bd64-f592bdf8b1e1
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: 63becccb-3e55-45d0-a721-77bf66243ae6
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column matter_id
+		dataType: string
+		lineageTag: b6bacb61-03e6-4a14-a8ac-0f46d7c3dc54
+		summarizeBy: none
+		sourceColumn: matter_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: double
+		lineageTag: 77aaa00b-51e2-4480-a609-35bf68027bac
+		summarizeBy: sum
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column description
+		dataType: string
+		lineageTag: 8428beb4-ecbd-4357-8ff5-0bac3678cded
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2a0f1d28-c4d6-45e5-80e2-43e5651d3fd9
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: c777d312-b25c-439f-9c3e-1fcae452c1e3
+			defaultHierarchy: LocalDateTable_b4dc4434-d113-4822-ada4-0bc0aa907d4c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column category
+		dataType: string
+		lineageTag: 2ecb9611-0c1c-4247-a38f-9a883eb2513a
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column billable
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e47fbd67-548b-4681-ac77-97ccc9ac8761
+		summarizeBy: none
+		sourceColumn: billable
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0e92f6a1-99e4-4833-a45c-65140e85633b
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: dbb3541e-3841-4654-b4ba-742ee12ec706
+			defaultHierarchy: LocalDateTable_8b1024a6-ebdc-47d9-996f-2476830676b9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 441f6dc8-09f5-4e99-b18d-0db694084ba9
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		variation Variation
+			isDefault
+			relationship: 537d9be9-f19a-4df7-966e-0dee07b05be1
+			defaultHierarchy: LocalDateTable_06b0a146-b708-4d9b-a06e-e44ab723607c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column _skyvia_sync
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fa6d61ed-49cf-4998-b9d9-9b6ec764f7d0
+		summarizeBy: none
+		sourceColumn: _skyvia_sync
+
+		variation Variation
+			isDefault
+			relationship: 0cf74b22-b839-42fb-afa2-0a9d5a48a4a3
+			defaultHierarchy: LocalDateTable_eb4fa60b-7f1d-4cd7-a1a7-30d329876ab5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Lawmatics-Expenses = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    lawmatics_Schema = #"caramel-compass-452313-u3_Database"{[Name="lawmatics",Kind="Schema"]}[Data],
+				    Expenses_Table = lawmatics_Schema{[Name="Expenses",Kind="Table"]}[Data]
+				in
+				    Expenses_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

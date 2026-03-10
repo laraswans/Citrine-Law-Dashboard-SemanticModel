@@ -1,0 +1,136 @@
+table Clio-ContactCustomFieldValues
+	lineageTag: 27d23b62-ba36-4bde-b901-4d345c6c069d
+
+	column ContactId
+		dataType: int64
+		formatString: 0
+		lineageTag: 60d208a9-3de2-4663-b3ca-f57a738cb877
+		summarizeBy: count
+		sourceColumn: ContactId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 8f14a708-a32c-4e21-9969-89135ffece4c
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etag
+		dataType: string
+		lineageTag: e18c59da-b84a-4101-b0e9-ba7936c8ee58
+		summarizeBy: none
+		sourceColumn: Etag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 556c7c6a-7b2d-49b5-a247-7c657df8d6fa
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: b042baa4-36aa-405d-b2f3-e4ebcda1ced2
+			defaultHierarchy: LocalDateTable_8dbc8f8b-376e-4a90-90dd-9e2fb68ab5a1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f4bf4684-567a-42db-ba0e-6a4ac749ea6a
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 1a1af5d5-8df7-4f37-a08d-ed5d1d24c8c5
+			defaultHierarchy: LocalDateTable_a63d4288-1e50-46a4-949e-d4e3dec02f5b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomFieldId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c0e40f1-8694-4c28-8bac-0327a1f638bd
+		summarizeBy: count
+		sourceColumn: CustomFieldId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomFieldEtag
+		dataType: string
+		lineageTag: 3913f5f4-4602-4467-8034-70977e3724c4
+		summarizeBy: none
+		sourceColumn: CustomFieldEtag
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldName
+		dataType: string
+		lineageTag: 1716a13e-cb67-463d-a0bc-001d018538ff
+		summarizeBy: none
+		sourceColumn: FieldName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldType
+		dataType: string
+		lineageTag: 0ed3fc7a-9833-496a-aaf6-0d7e0524ca1d
+		summarizeBy: none
+		sourceColumn: FieldType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: string
+		lineageTag: caecd184-6ede-449b-88b3-e42aab3da071
+		summarizeBy: none
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+	column PicklistOptionId
+		dataType: int64
+		formatString: 0
+		lineageTag: b3ffcb0d-257c-4cab-a876-88dbaeff6538
+		summarizeBy: count
+		sourceColumn: PicklistOptionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PicklistOptionEtag
+		dataType: string
+		lineageTag: 0634dfa7-3b1e-4de4-90c6-59c68d2e4064
+		summarizeBy: none
+		sourceColumn: PicklistOptionEtag
+
+		annotation SummarizationSetBy = Automatic
+
+	column PicklistOptionText
+		dataType: string
+		lineageTag: a110dc25-5d46-4e07-9706-0fd1322f3a15
+		summarizeBy: none
+		sourceColumn: PicklistOptionText
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Clio-ContactCustomFieldValues = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    clio_manage_Schema = #"caramel-compass-452313-u3_Database"{[Name="clio_manage",Kind="Schema"]}[Data],
+				    ContactCustomFieldValues_Table = clio_manage_Schema{[Name="ContactCustomFieldValues",Kind="Table"]}[Data]
+				in
+				    ContactCustomFieldValues_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,83 @@
+table Lawmatics-Stages
+	lineageTag: 49f65937-07f6-457c-86ea-d76976f48f76
+
+	column id
+		dataType: string
+		lineageTag: ec1bf27d-d87e-4802-adaf-b100d93f9b23
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: 90350680-609e-4f4c-891e-8a3bf26970b6
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 4a7f962b-d2ec-496a-b907-7c9e368428bb
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 446e57cd-af0d-4013-a9e5-441db2c210b9
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: 2047b97e-e450-4482-9651-33656d5e3ee2
+			defaultHierarchy: LocalDateTable_b50be1c4-e4ea-47f0-acda-6e6ff86c0203.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d9d5e10e-470e-4b11-ad96-7216e844c5bf
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		variation Variation
+			isDefault
+			relationship: 9c8a5fe0-72a3-4711-a5c5-faa82debec99
+			defaultHierarchy: LocalDateTable_bc6a5e54-f89f-4e85-b3db-beac881b04d8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column _skyvia_sync
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1ef910e9-47ee-4aab-8bab-2590fd3c2584
+		summarizeBy: none
+		sourceColumn: _skyvia_sync
+
+		variation Variation
+			isDefault
+			relationship: bfe350f5-5237-4271-be97-0c883fb5745d
+			defaultHierarchy: LocalDateTable_b1431903-b08f-4482-b533-94969a979ace.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Lawmatics-Stages = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"caramel-compass-452313-u3_Database" = Source{[Name="caramel-compass-452313-u3",Kind="Database"]}[Data],
+				    lawmatics_Schema = #"caramel-compass-452313-u3_Database"{[Name="lawmatics",Kind="Schema"]}[Data],
+				    Stages_Table = lawmatics_Schema{[Name="Stages",Kind="Table"]}[Data]
+				in
+				    Stages_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
