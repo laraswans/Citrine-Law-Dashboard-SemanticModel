@@ -557,3 +557,8 @@ relationship 182eebcd-e77f-2e6a-8259-5e857f8ca21e
 	toCardinality: one
 	fromColumn: 'Clio-DenormalizedMatters'.MatchID
 	toColumn: 'Lawmatics-Prospects-Expanded'.id
+
+relationship 'Lawmatics-Prospects-Expanded_stage_id_Stage Mapping_StageId'
+	crossFilteringBehavior: bothDirections
+	fromColumn: Lawmatics-Prospects-Expanded.stage_id
+	toColumn: 'Stage Mapping'.StageId
