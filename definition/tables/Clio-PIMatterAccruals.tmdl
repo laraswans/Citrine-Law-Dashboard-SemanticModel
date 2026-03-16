@@ -359,6 +359,5 @@ table Clio-PIMatterAccruals
 				in
 				    PIMatterAccruals_View
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

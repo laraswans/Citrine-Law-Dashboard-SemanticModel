@@ -92,34 +92,6 @@ table Lawmatics-Events
 
 		annotation SummarizationSetBy = Automatic
 
-	column created_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 77f2cd43-3b3e-4e14-86fd-a3051953ec07
-		summarizeBy: none
-		sourceColumn: created_at
-
-		variation Variation
-			isDefault
-			relationship: 9b2e1161-aafa-4ef2-b0af-8ca76f294f73
-			defaultHierarchy: LocalDateTable_df127738-7fe6-48dc-87fe-a71fee7b55bd.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column updated_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 04830dc3-0169-476f-a4e8-6039e4f8e4f4
-		summarizeBy: none
-		sourceColumn: updated_at
-
-		variation Variation
-			isDefault
-			relationship: 024fd23a-b499-482e-81d0-c84f231f9ca6
-			defaultHierarchy: LocalDateTable_d876d506-3bf6-4de5-bf7a-96e8525c5956.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
 	column event_type_id
 		dataType: string
 		lineageTag: 7653cc1e-b9ac-43b0-a3ec-694b39834d7b
@@ -150,6 +122,34 @@ table Lawmatics-Events
 
 		annotation SummarizationSetBy = Automatic
 
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 239ddeaa-f52e-4b8d-9d40-f4153cfadf24
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 1c733f1f-4245-4e44-9e3a-d07e496c1008
+			defaultHierarchy: LocalDateTable_00be1252-0a04-4106-9cce-fa2971a9cf0d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1c29fc8c-0626-42cf-8f8a-9d7eff7a0a55
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 7192c15a-464a-49da-a8fd-29a59c61dcef
+			defaultHierarchy: LocalDateTable_a8e81d17-fb21-4030-b8dc-a0773aae9d0b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Lawmatics-Events = m
 		mode: import
 		source =
@@ -161,6 +161,5 @@ table Lawmatics-Events
 				in
 				    Events_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

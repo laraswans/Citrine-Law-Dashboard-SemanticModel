@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Citrine-Law-Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f000a7cc-ab74-4957-bf1b-4ea6a7ca365c"
+  }
+}

@@ -65,34 +65,6 @@ table Lawmatics-Prospects
 
 		annotation SummarizationSetBy = Automatic
 
-	column created_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 28d35f79-1d22-43b6-a18c-7c07aafdebd4
-		summarizeBy: none
-		sourceColumn: created_at
-
-		variation Variation
-			isDefault
-			relationship: 85d18fef-c89e-4452-b3e0-986db0fdfd00
-			defaultHierarchy: LocalDateTable_2280326f-a1ca-4ad0-9f14-3bd649abfab6.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column updated_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 8b98a3b8-e1c7-44db-868e-813504a0061e
-		summarizeBy: none
-		sourceColumn: updated_at
-
-		variation Variation
-			isDefault
-			relationship: 26e2fd77-60ee-4057-9e08-e021b5714085
-			defaultHierarchy: LocalDateTable_9c0a330d-32c6-4991-8f3f-a7576608d259.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
 	column _skyvia_sync
 		dataType: dateTime
 		formatString: General Date
@@ -107,6 +79,98 @@ table Lawmatics-Prospects
 
 		annotation SummarizationSetBy = Automatic
 
+	column status
+		dataType: string
+		lineageTag: b8c4c348-9e93-4f55-81b7-bd25581732c2
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column address
+		dataType: string
+		lineageTag: 6845ffd2-e09d-40db-bfc8-53a73103dc65
+		summarizeBy: none
+		sourceColumn: address
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 13ac93d0-b0cd-4cb6-af9e-c50aec31474f
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: 2ed71b57-67ce-47a0-8319-1b2c1160fa24
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 66fb8f54-d898-4abb-b91d-1f380defc54a
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column stage_id
+		dataType: string
+		lineageTag: 4c53c4ee-60e3-42db-9347-761fa432753e
+		summarizeBy: none
+		sourceColumn: stage_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_id
+		dataType: string
+		lineageTag: d4ba7747-83c7-4f06-84ff-2693915a7761
+		summarizeBy: none
+		sourceColumn: source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column practice_area_id
+		dataType: string
+		lineageTag: c71d19fc-bd33-4e4a-a641-c21a801cda9d
+		summarizeBy: none
+		sourceColumn: practice_area_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b74272a6-7690-44b5-9e27-978819b23a80
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 28adcdf3-502f-4b0f-add0-c58732929882
+			defaultHierarchy: LocalDateTable_576bf979-fda7-4141-8e67-1604ecfabfc9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 583d3b85-f2dd-43ce-bbfb-2ea06e589a4a
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: c76f2e39-41e9-47ed-8019-74423563127c
+			defaultHierarchy: LocalDateTable_c1fa3f3b-52c5-43e5-8937-3300fd3d88a8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Lawmatics-Prospects = m
 		mode: import
 		source =
@@ -118,6 +182,5 @@ table Lawmatics-Prospects
 				in
 				    Prospects_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

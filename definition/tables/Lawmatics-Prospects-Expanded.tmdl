@@ -41,25 +41,46 @@ table Lawmatics-Prospects-Expanded
 		formatString: 0
 		lineageTag: 5d1f1c44-6098-4591-8499-3f375d5e6f63
 
-	/// PLACEHOLDER: Requires stage_id column on Prospects. Formula will be: CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), RELATEDTABLE filter on Stage Mapping MainStatus = Hired)
-	measure Hired = BLANK()
+	/// Count of prospects in Hired stage
+	measure Hired =
+			CALCULATE(
+			    COUNTROWS('Lawmatics-Prospects-Expanded'),
+			    'Stage Mapping'[MainStatus] = "Hired"
+			)
 		formatString: 0
 		lineageTag: 73e5caca-3f87-4773-a191-e80ba71e8d69
 
-	/// PLACEHOLDER: Requires stage_id column on Prospects.
-	measure 'Did Not Hire' = BLANK()
+	/// Count of prospects in Did Not Hire stage
+	measure 'Did Not Hire' =
+			CALCULATE(
+			    COUNTROWS('Lawmatics-Prospects-Expanded'),
+			    'Stage Mapping'[MainStatus] = "Did Not Hire"
+			)
 		formatString: 0
 		lineageTag: 0e4639b3-dcfd-410f-91c2-dcd6b9b6586a
 
-	/// PLACEHOLDER: Requires stage_id column on Prospects.
-	measure Intake = BLANK()
+	/// Count of prospects in Intake stage
+	measure Intake =
+			CALCULATE(
+			    COUNTROWS('Lawmatics-Prospects-Expanded'),
+			    'Stage Mapping'[MainStatus] = "Intake"
+			)
 		formatString: 0
 		lineageTag: c68be81e-cacd-4379-82da-7f67692fc1dd
 
-	/// PLACEHOLDER: Requires stage_id. Formula will be: DIVIDE([Hired], [Hired] + [Did Not Hire], 0)
-	measure 'Conversion Rate' = BLANK()
+	/// Hired / (Hired + Did Not Hire)
+	measure 'Conversion Rate' =
+			DIVIDE(
+			    [Hired],
+			    [Hired] + [Did Not Hire],
+			    0
+			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: aaae56a6-8fef-4eb3-8a9a-9778fc0ccd11
+
+	/// Selected stage name value
+	measure 'Status Label' = SELECTEDVALUE('Lawmatics-Prospects-Expanded'[stage_name])
+		lineageTag: b4ae42e8-750a-4f4c-945f-94505fb31298
 
 	column id
 		dataType: string
@@ -114,34 +135,6 @@ table Lawmatics-Prospects-Expanded
 		lineageTag: 0bc2bc2f-c838-436d-81bc-9768a52bf4c3
 		summarizeBy: none
 		sourceColumn: phone
-
-		annotation SummarizationSetBy = Automatic
-
-	column created_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 29d4bd62-d6ce-4c65-8b61-2f73e1c661cc
-		summarizeBy: none
-		sourceColumn: created_at
-
-		variation Variation
-			isDefault
-			relationship: edf89e07-21d0-42e2-aab0-75348a8aa725
-			defaultHierarchy: LocalDateTable_a283130a-14a3-4f2f-ad07-033b8ce5a882.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column updated_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: f8fb4625-dbbb-461a-963e-67250b3d04ed
-		summarizeBy: none
-		sourceColumn: updated_at
-
-		variation Variation
-			isDefault
-			relationship: d7cc6016-6a72-4f8f-85f4-6a772e443c41
-			defaultHierarchy: LocalDateTable_204d5f0a-d3fc-4366-8c3e-bede0652841a.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -953,7 +946,9 @@ table Lawmatics-Prospects-Expanded
 		dataType: int64
 		formatString: 0
 		lineageTag: 07086e1a-6bb7-4338-8bbd-6c69ef262f22
-		summarizeBy: none
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
 
 	column MonthStart = STARTOFMONTH('Lawmatics-Prospects-Expanded'[created_at])
 		dataType: dateTime
@@ -993,6 +988,145 @@ table Lawmatics-Prospects-Expanded
 		lineageTag: 00e1248f-aa5a-44aa-8c4f-d1539900fcd9
 		summarizeBy: none
 
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 45788dea-b674-403f-aa5c-313f639a2ae5
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: f2fbf812-fcff-4739-a6d2-bf1b01b0f7f1
+			defaultHierarchy: LocalDateTable_102cefeb-6447-4d70-8c68-f41eeeb26b71.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fdb9a623-011f-49b2-b449-e26b86923d43
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 64bb9828-3051-4f7b-b889-ef7086d343ef
+			defaultHierarchy: LocalDateTable_a0ba33da-062c-483a-921f-31ec6ed50fc0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 3b76852d-b94f-4de8-9968-564fbb62fa09
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column address
+		dataType: string
+		lineageTag: dbd74eb0-279c-4c29-807a-4791e876c08a
+		summarizeBy: none
+		sourceColumn: address
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 11b691d4-1cee-40be-842c-8faa338f2089
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: f072880a-b6bc-4bdd-b647-b533eb70f0a1
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 30db225d-d36d-4bf9-914e-704fcfdbe5ca
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column stage_id
+		dataType: string
+		lineageTag: d8351137-5046-4011-8a11-9af2eb68b258
+		summarizeBy: none
+		sourceColumn: stage_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column stage_name
+		dataType: string
+		lineageTag: f40387d4-4e18-4d1e-8413-47e2bde9e3a9
+		summarizeBy: none
+		sourceColumn: stage_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_id
+		dataType: string
+		lineageTag: c6fcc0a7-5392-4c05-a28e-20ffb9143493
+		summarizeBy: none
+		sourceColumn: source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_name
+		dataType: string
+		lineageTag: 8337a3ff-8255-4854-9bae-eb450b339919
+		summarizeBy: none
+		sourceColumn: source_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column practice_area_id
+		dataType: string
+		lineageTag: bf0a1197-58d5-413d-98a4-79e8ca933eba
+		summarizeBy: none
+		sourceColumn: practice_area_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column practice_area_name
+		dataType: string
+		lineageTag: 7ef36907-5bec-4272-bd52-506055efd5d2
+		summarizeBy: none
+		sourceColumn: practice_area_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Matrix Sort Order' =
+			VAR LookupSort = RELATED('Stage Mapping'[SortOrder])
+			RETURN IF(ISBLANK(LookupSort), 99, LookupSort)
+		dataType: int64
+		lineageTag: f26a3d5f-937d-4b3e-98cf-29c525395b5a
+
+	column 'Main Status' =
+			VAR LookupCategory = RELATED('Stage Mapping'[MainStatus])
+			RETURN IF(ISBLANK(LookupCategory), "Uncategorized", LookupCategory)
+		dataType: string
+		lineageTag: cfeecea0-fd87-415b-896c-a6592b756de2
+		sortByColumn: 'Matrix Sort Order'
+
+	/// Source name with hire rate percentage
+	column 'Staff Performance Axis' =
+			VAR StaffName = 'Lawmatics-Prospects-Expanded'[source_name]
+			VAR StaffLeads = CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), ALL('Lawmatics-Prospects-Expanded'), 'Lawmatics-Prospects-Expanded'[source_name] = StaffName)
+			VAR StaffHires = CALCULATE(COUNTROWS('Lawmatics-Prospects-Expanded'), ALL('Lawmatics-Prospects-Expanded'), 'Lawmatics-Prospects-Expanded'[source_name] = StaffName, 'Lawmatics-Prospects-Expanded'[Main Status] = "Hired")
+			VAR StaffRate = DIVIDE(COALESCE(StaffHires, 0), COALESCE(StaffLeads, 1), 0)
+			RETURN 'Lawmatics-Prospects-Expanded'[source_name] & " (" & FORMAT(StaffRate, "0%") & ")"
+		dataType: string
+		lineageTag: f632a637-3970-4c5e-9a8e-8d2cb05b8852
+
 	partition Lawmatics-Prospects-Expanded = m
 		mode: import
 		source =
@@ -1004,6 +1138,5 @@ table Lawmatics-Prospects-Expanded
 				in
 				    #"Prospects-Expanded_View"
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Exception
+

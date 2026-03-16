@@ -355,6 +355,5 @@ table Clio-Tasks-Expanded
 				in
 				    #"Tasks-Expanded_View"
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Exception
+

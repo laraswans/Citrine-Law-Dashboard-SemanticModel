@@ -394,6 +394,5 @@ table Clio-Matters
 				in
 				    Matters_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

@@ -452,6 +452,5 @@ table Clio-Bills
 				in
 				    Bills_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

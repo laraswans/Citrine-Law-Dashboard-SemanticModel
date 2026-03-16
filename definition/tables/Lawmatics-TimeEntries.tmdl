@@ -86,34 +86,6 @@ table Lawmatics-TimeEntries
 
 		annotation SummarizationSetBy = Automatic
 
-	column created_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 166cecda-0039-4bcd-90a4-55c4433ab219
-		summarizeBy: none
-		sourceColumn: created_at
-
-		variation Variation
-			isDefault
-			relationship: bf71ab2a-bc7b-4dae-b28a-009de9240a90
-			defaultHierarchy: LocalDateTable_b22b91ec-8f31-48fe-bb6c-c9b71fe3bc13.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column updated_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: d3d5dbf7-9297-4205-b4bf-6367e3b321f5
-		summarizeBy: none
-		sourceColumn: updated_at
-
-		variation Variation
-			isDefault
-			relationship: 7b2b61f2-41d6-4ba5-8b10-a8792e21a8ad
-			defaultHierarchy: LocalDateTable_e2a8f6e3-bffb-4f39-8d52-edf37c28e6b7.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
 	column _skyvia_sync
 		dataType: dateTime
 		formatString: General Date
@@ -128,6 +100,34 @@ table Lawmatics-TimeEntries
 
 		annotation SummarizationSetBy = Automatic
 
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 74fb03a3-2d17-40fa-b654-8d0bd7b41dfd
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 0cd83f98-b793-4dcd-9c27-dedfa3fb9256
+			defaultHierarchy: LocalDateTable_47257c1d-ca87-4573-84c2-b1f76f705303.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5e4cc82f-b749-4991-8824-6f4be88934fc
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 47a7f567-c3d3-4725-b686-48a721cd2afc
+			defaultHierarchy: LocalDateTable_541f1efb-7149-427d-8a30-fc97d337a014.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Lawmatics-TimeEntries = m
 		mode: import
 		source =
@@ -139,6 +139,5 @@ table Lawmatics-TimeEntries
 				in
 				    TimeEntries_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

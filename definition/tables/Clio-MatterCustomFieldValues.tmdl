@@ -131,6 +131,5 @@ table Clio-MatterCustomFieldValues
 				in
 				    MatterCustomFieldValues_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

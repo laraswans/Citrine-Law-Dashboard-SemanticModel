@@ -25,34 +25,6 @@ table Lawmatics-Pipelines
 
 		annotation SummarizationSetBy = Automatic
 
-	column created_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 75e25c04-5eed-49a8-9653-abcc1eaa2151
-		summarizeBy: none
-		sourceColumn: created_at
-
-		variation Variation
-			isDefault
-			relationship: 357e670a-4e92-4190-8984-ad23027ff3f3
-			defaultHierarchy: LocalDateTable_12312be9-0249-4478-9d42-bb76eaca7520.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column updated_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 7fa32fbd-9027-4c97-85f2-312047259ef2
-		summarizeBy: none
-		sourceColumn: updated_at
-
-		variation Variation
-			isDefault
-			relationship: 99a59243-34b1-4621-a51c-fcacdee914e4
-			defaultHierarchy: LocalDateTable_d8d57d0f-b979-40c6-914f-bf3309ea5080.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
 	column _skyvia_sync
 		dataType: dateTime
 		formatString: General Date
@@ -67,6 +39,34 @@ table Lawmatics-Pipelines
 
 		annotation SummarizationSetBy = Automatic
 
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f01dfcdb-c125-450b-b3f7-76aaa5c823d0
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: fefaf8d5-58e5-4ac9-87d8-384914fd0dbc
+			defaultHierarchy: LocalDateTable_58d90f99-beca-4adc-a0a4-45de590226ef.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 93b45587-cc85-4536-b756-f16d7ee65c6e
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 78a84de7-d4e7-4bb0-8c85-7a72ef98420e
+			defaultHierarchy: LocalDateTable_c8b0e138-75e0-4531-9359-098f5d86ac68.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Lawmatics-Pipelines = m
 		mode: import
 		source =
@@ -78,6 +78,5 @@ table Lawmatics-Pipelines
 				in
 				    Pipelines_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

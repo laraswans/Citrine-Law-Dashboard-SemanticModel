@@ -288,6 +288,5 @@ table Clio-DenormalizedContacts
 				in
 				    DenormalizedContacts_View
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

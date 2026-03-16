@@ -223,6 +223,5 @@ table Clio-Tasks
 				in
 				    Tasks_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

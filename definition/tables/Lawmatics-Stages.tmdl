@@ -25,34 +25,6 @@ table Lawmatics-Stages
 
 		annotation SummarizationSetBy = Automatic
 
-	column created_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 446e57cd-af0d-4013-a9e5-441db2c210b9
-		summarizeBy: none
-		sourceColumn: created_at
-
-		variation Variation
-			isDefault
-			relationship: 2047b97e-e450-4482-9651-33656d5e3ee2
-			defaultHierarchy: LocalDateTable_b50be1c4-e4ea-47f0-acda-6e6ff86c0203.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column updated_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: d9d5e10e-470e-4b11-ad96-7216e844c5bf
-		summarizeBy: none
-		sourceColumn: updated_at
-
-		variation Variation
-			isDefault
-			relationship: 9c8a5fe0-72a3-4711-a5c5-faa82debec99
-			defaultHierarchy: LocalDateTable_bc6a5e54-f89f-4e85-b3db-beac881b04d8.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
 	column _skyvia_sync
 		dataType: dateTime
 		formatString: General Date
@@ -67,6 +39,34 @@ table Lawmatics-Stages
 
 		annotation SummarizationSetBy = Automatic
 
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6e892057-ee46-43b3-b6c7-9a8ae212906e
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 2a563a81-3cd9-4980-92e7-7ba941ec8621
+			defaultHierarchy: LocalDateTable_d507bab1-7e2f-4190-9dbc-7be92433ee0d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bba59b7e-f04e-4e91-a262-90ada384dd54
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: bca99904-a678-4d7d-9ae0-a0f05feb90a8
+			defaultHierarchy: LocalDateTable_2c64082a-8081-48d2-a10e-84579ea5cd74.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Lawmatics-Stages = m
 		mode: import
 		source =
@@ -78,6 +78,5 @@ table Lawmatics-Stages
 				in
 				    Stages_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

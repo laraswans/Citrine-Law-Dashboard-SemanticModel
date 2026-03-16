@@ -256,6 +256,5 @@ table Clio-Contacts
 				in
 				    Contacts_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

@@ -201,6 +201,5 @@ table Clio-Users
 				in
 				    Users_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

@@ -1,0 +1,287 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 4544.36163941536,
+            "y": 25
+          },
+          "nodeIndex": "Lawmatics-Prospects-Expanded",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.1847511806298,
+            "y": -22.195050904890223
+          },
+          "nodeIndex": "Clio-DenormalizedMatters",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2272.3616394153596,
+            "y": 25
+          },
+          "nodeIndex": "Clio-Contacts",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988.3616394153598,
+            "y": 27
+          },
+          "nodeIndex": "Lawmatics-Contacts",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": -41.129941727546026
+          },
+          "nodeIndex": "Clio-Matters",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3124.3616394153596,
+            "y": 25
+          },
+          "nodeIndex": "Lawmatics-Events",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4260.36163941536,
+            "y": 25
+          },
+          "nodeIndex": "Lawmatics-Prospects",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4828.36163941536,
+            "y": 63
+          },
+          "nodeIndex": "Lawmatics-Stages",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2556.3616394153596,
+            "y": 63
+          },
+          "nodeIndex": "Lawmatics-CustomFields",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3976.3616394153596,
+            "y": 63
+          },
+          "nodeIndex": "Lawmatics-Pipelines",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3692.3616394153596,
+            "y": 25
+          },
+          "nodeIndex": "Clio-MatterCustomFieldValues",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704.3616394153598,
+            "y": 25
+          },
+          "nodeIndex": "Clio-ContactCustomFieldValues",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2840.3616394153596,
+            "y": 25
+          },
+          "nodeIndex": "Clio-DenormalizedContacts",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.36163941535983,
+            "y": -8.8700582724539743
+          },
+          "nodeIndex": "Clio-PIMatterAccruals",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420.3616394153598,
+            "y": 25
+          },
+          "nodeIndex": "Clio-Bills",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3408.3616394153596,
+            "y": 25
+          },
+          "nodeIndex": "Lawmatics-Expenses",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1186.3616394153598,
+            "y": -25
+          },
+          "nodeIndex": "Clio-Tasks",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 902.36163941535983,
+            "y": -25
+          },
+          "nodeIndex": "Clio-Tasks-Expanded",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5112.36163941536,
+            "y": 25
+          },
+          "nodeIndex": "Lawmatics-TimeEntries",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5396.36163941536,
+            "y": 25
+          },
+          "nodeIndex": "Clio-Users",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5680.36163941536,
+            "y": 27
+          },
+          "nodeIndex": "Lawmatics-Users",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5914.36163941536,
+            "y": 95.064970863773
+          },
+          "nodeIndex": "Stage Mapping",
+          "nodeLineageTag": "7e563d3e-1996-4586-bb06-f04e20cdb2ef",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 79.553182037699813,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

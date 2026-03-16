@@ -1316,7 +1316,7 @@ table Clio-DenormalizedMatters
 		annotation SummarizationSetBy = Automatic
 
 	column MatchID =
-
+			
 			IF(
 			    ISBLANK('Clio-DenormalizedMatters'[ClientReference]) || 'Clio-DenormalizedMatters'[ClientReference] = "",
 			    "NO_MATCH_" & FORMAT('Clio-DenormalizedMatters'[Id], "0"),
@@ -1338,6 +1338,5 @@ table Clio-DenormalizedMatters
 				in
 				    DenormalizedMatters_View
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

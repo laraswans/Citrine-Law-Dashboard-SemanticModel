@@ -49,34 +49,6 @@ table Lawmatics-Contacts
 
 		annotation SummarizationSetBy = Automatic
 
-	column created_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 45ca8be4-5b76-4fed-8d44-502819be4a40
-		summarizeBy: none
-		sourceColumn: created_at
-
-		variation Variation
-			isDefault
-			relationship: 39a7a7de-6e9a-421d-8635-8041fbe71eb6
-			defaultHierarchy: LocalDateTable_76b4e46e-5550-4f57-9aff-03d901aca40a.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column updated_at
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 43b7b20c-6c5f-4dfa-94aa-88644681518f
-		summarizeBy: none
-		sourceColumn: updated_at
-
-		variation Variation
-			isDefault
-			relationship: 6ba8253d-8ee6-4a2a-b91e-f22aacf85a94
-			defaultHierarchy: LocalDateTable_eb96b06e-2fc8-48bf-b9dc-a259e9a2ede5.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
 	column _skyvia_sync
 		dataType: dateTime
 		formatString: General Date
@@ -91,6 +63,34 @@ table Lawmatics-Contacts
 
 		annotation SummarizationSetBy = Automatic
 
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7fe674a7-cd02-44b6-9443-3075c3e6d8ba
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: c9c84ebc-8b71-4f61-aba3-b1582171fc7c
+			defaultHierarchy: LocalDateTable_8d0df564-c552-4258-a7a2-d9a82213545b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3cfb558d-2640-4ec5-b189-c433eab81ef0
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 789724e5-d04f-41ae-976a-41e1938ac214
+			defaultHierarchy: LocalDateTable_b88a7983-0ee7-4e5b-bb0a-bc755edbb328.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Lawmatics-Contacts = m
 		mode: import
 		source =
@@ -102,6 +102,5 @@ table Lawmatics-Contacts
 				in
 				    Contacts_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

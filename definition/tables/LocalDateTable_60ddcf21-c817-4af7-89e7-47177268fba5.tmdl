@@ -1,13 +1,13 @@
 table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 	isHidden
 	showAsVariationsOnly
-	lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-local-date-auto
+	lineageTag: e494121d-0549-4f40-91ad-f7936ac98788
 
 	column Date
 		dataType: dateTime
 		isHidden
 		formatString: General Date
-		lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-col-date
+		lineageTag: df4edf3e-d116-45a1-9ac3-c37730541aaa
 		dataCategory: PaddedDateTableDates
 		summarizeBy: none
 		isNameInferred
@@ -19,7 +19,7 @@ table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-col-year
+		lineageTag: e367174c-b2f2-410b-aff4-118494093d77
 		dataCategory: Years
 		summarizeBy: none
 
@@ -31,7 +31,7 @@ table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-col-monthno
+		lineageTag: e40db2cd-1c05-4130-b2a8-70b72a84cd2f
 		dataCategory: MonthOfYear
 		summarizeBy: none
 
@@ -42,7 +42,7 @@ table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 	column Month = FORMAT([Date], "MMMM")
 		dataType: string
 		isHidden
-		lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-col-month
+		lineageTag: da9e80e6-c5e7-4e90-91d5-b4c95e495832
 		dataCategory: Months
 		summarizeBy: none
 		sortByColumn: MonthNo
@@ -55,7 +55,7 @@ table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-col-quarterno
+		lineageTag: 88a78b37-e2dd-4a56-9cee-54be09491feb
 		dataCategory: QuarterOfYear
 		summarizeBy: none
 
@@ -66,7 +66,7 @@ table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 	column Quarter = "Qtr " & [QuarterNo]
 		dataType: string
 		isHidden
-		lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-col-quarter
+		lineageTag: fa32cdff-1f2c-4622-a22f-fe462be12d83
 		dataCategory: Quarters
 		summarizeBy: none
 		sortByColumn: QuarterNo
@@ -79,7 +79,7 @@ table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-col-day
+		lineageTag: 448ec323-9cb7-40a0-8a0f-177c6a2a1bd3
 		dataCategory: DayOfMonth
 		summarizeBy: none
 
@@ -88,22 +88,22 @@ table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 		annotation TemplateId = Day
 
 	hierarchy 'Date Hierarchy'
-		lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-hier
+		lineageTag: 68f259eb-03a8-4d79-b792-d79e7825fc72
 
 		level Year
-			lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-hier-year
+			lineageTag: dbcf4930-f54a-48f4-8d61-504ca74737da
 			column: Year
 
 		level Quarter
-			lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-hier-quarter
+			lineageTag: d325709c-c61d-40a4-92d6-b432a8b2d821
 			column: Quarter
 
 		level Month
-			lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-hier-month
+			lineageTag: 9706ab9d-8cd6-4b42-bc42-8ca708c669a2
 			column: Month
 
 		level Day
-			lineageTag: 60ddcf21-c817-4af7-89e7-47177268fba5-hier-day
+			lineageTag: 1ed95e8d-dd79-4689-9c49-5c4bb1890c69
 			column: Day
 
 		annotation TemplateId = DateHierarchy
@@ -113,3 +113,4 @@ table LocalDateTable_60ddcf21-c817-4af7-89e7-47177268fba5
 		source = Calendar(Date(Year(MIN('Clio-Matters'[CloseDate])), 1, 1), Date(Year(MAX('Clio-Matters'[CloseDate])), 12, 31))
 
 	annotation __PBI_LocalDateTable = true
+

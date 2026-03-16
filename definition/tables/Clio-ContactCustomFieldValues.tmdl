@@ -131,6 +131,5 @@ table Clio-ContactCustomFieldValues
 				in
 				    ContactCustomFieldValues_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+

@@ -55,6 +55,34 @@ table Lawmatics-CustomFields
 
 		annotation SummarizationSetBy = Automatic
 
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: eaf68fde-bf4d-480f-8cd5-ea6360c9a907
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 6f027263-ed37-4016-8435-8aa723cb289e
+			defaultHierarchy: LocalDateTable_93b0e6d1-2a9e-48a0-919a-53b97a93f204.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a68c8b69-be09-455b-91ea-bdb93ad620cf
+		summarizeBy: none
+		sourceColumn: UpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 93f175a9-1b15-4db1-8125-ec135400edfe
+			defaultHierarchy: LocalDateTable_2e61c5c4-78ef-46ac-a29c-868b4b37a36b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Lawmatics-CustomFields = m
 		mode: import
 		source =
@@ -66,6 +94,5 @@ table Lawmatics-CustomFields
 				in
 				    CustomFields_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
+
